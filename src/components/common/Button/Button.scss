@@ -12,15 +12,15 @@
 }
 
 .outline {
-    border: 2px solid $fire_opal;
+    border: 2px solid $primaryColor;
     background-color: transparent;
     color: white;
     &:hover {
-        background: $fire_opal;
+        background: $primaryColor;
         -webkit-transition: background-color .3s ease;
         -moz-transition: background-color .3s ease;
         -o-transition: background-color .3s ease;
         transition: background-color .3s ease;
-        border: 2px solid $fire_opal;
+        border: 2px solid $primaryColor;
     }
 }
