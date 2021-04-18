@@ -1,5 +1,17 @@
 $fire_opal: #F25F5C;
+$gray75: #50514F;
+$baseUnit: 8;
+
+$primaryColor: $fire_opal;
+$bgColor: $gray75;
+
 
 :export {
-  $fire_opal: $fire_opal
+  $fire_opal: $fire_opal;
+  $gray75: $gray75;
+  $baseUnit: $baseUnit;
+
+  $primaryColor: $fire_opal;
+  $secondaryColor: $gray75;
+
 }

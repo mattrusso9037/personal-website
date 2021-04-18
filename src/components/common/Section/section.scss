@@ -1,0 +1,12 @@
+@import '../../../common/variables.scss';
+
+.Section {
+  height: 100vh;
+  color: white;
+  padding: $baseUnit*6px;
+  > h2 {
+    font-size: $baseUnit*6px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+}

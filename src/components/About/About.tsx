@@ -1,5 +1,6 @@
 import React, {FC, MutableRefObject} from 'react';
 import './about.scss';
+import {Section} from '../common/Section/Section';
 
 interface IAboutProps {
     aboutRef: MutableRefObject<null | HTMLDivElement>;
@@ -8,9 +9,9 @@ interface IAboutProps {
 export const About: FC<IAboutProps> = ({aboutRef}) => {
     return (
         <div className={'About'} ref={aboutRef}>
-            <div>
-                About Me
-            </div>
+            <Section title={'About'}>
+                <div></div>
+            </Section>
         </div>
     )
 };

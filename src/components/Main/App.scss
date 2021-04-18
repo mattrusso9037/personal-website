@@ -1,5 +1,11 @@
+@import '../../common/variables';
+
 .App {
   text-align: center;
+  font-family: Roboto, serif;
+  .main_content {
+    background: $bgColor;
+  }
 }
 
 .App-logo {
