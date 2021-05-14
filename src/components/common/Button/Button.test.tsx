@@ -8,4 +8,14 @@ describe('Button component', () => {
 
         expect(wrapper.find('button').text()).toBe('Test');
     });
+
+    it('Should call onClick when pressed', () => {
+        const fn = jest.fn();
+
+        const wrapper = shallow(<Button type={'primary'} text={'Test'} onClick={fn} />);
+
+        wrapper.find('button').simulate('click');
+
+        expect(fn).toHaveBeenCalledTimes(1);
+    });
 });

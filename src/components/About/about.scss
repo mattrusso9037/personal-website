@@ -1,6 +1,13 @@
 @import '../../common/variables';
 
 .About {
-
-
+  > .Section {
+    > .body {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      padding-left: $baseUnit*6px;
+      padding-right: $baseUnit*6px;
+    }
+  }
 }

@@ -9,7 +9,9 @@ export const Section: FC<ISectionProps> = ({title, children}) => {
     return (
         <div className={`Section ${title}`}>
             <h2>{title}</h2>
-            {children}
+            <div className={'body'}>
+                {children}
+            </div>
         </div>
 
     )
