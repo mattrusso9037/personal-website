@@ -3,13 +3,47 @@
 .Section {
   min-height: 100vh;
   color: white;
-  padding: $baseUnit*6px;
-  > h2 {
-    font-size: $baseUnit*6px;
-    margin: 0;
-    text-transform: uppercase;
+  padding: $baseUnit*8px $baseUnit*4px;
+  border: $debug_border;
+  max-width: 850px;
+  margin: auto;
+  > .section_header {
+    display: grid;
+    grid-template-columns: fit-content(100%) fit-content(100%) 1fr;
+    border: $debug_border;
+    align-items: center;
+    grid-gap: $baseUnit*1px;
+    > h2 {
+      font-size: $baseUnit*4px;
+      margin: 0;
+    }
+    > hr {
+      width: calc(100% - #{$baseUnit*8px});
+      color: white;
+      background: white;
+      opacity: .4;
+    }
   }
+
   > .body {
-    padding-top: $baseUnit*8px;
+    border: $debug_border;
+    padding-top: $baseUnit*4px;
+    display: flex;
+    //gap: $baseUnit*8px;
+    flex-wrap: wrap;
+  }
+}
+
+//@media screen and (max-width: 1600px) {
+//  .Section {
+//    padding: $baseUnit*9px;
+//    margin: $baseUnit*9px;
+//  }
+//}
+
+@media screen and (max-width: 1200px) {
+  .Section {
+    //padding: $baseUnit*9px;
+    //margin: $baseUnit*2px;
   }
 }

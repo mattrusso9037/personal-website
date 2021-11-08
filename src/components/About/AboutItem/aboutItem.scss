@@ -1,15 +1,15 @@
 @import '../../../common/variables';
-
+$iconSize: 50px;
 .AboutItem {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: fit-content(100%) fit-content(100%) 1fr;
+  grid-gap: $baseUnit*2px;
   align-items: center;
-  padding: $baseUnit*6;
-  width: calc(25% - 96px);
+  justify-content: center;
 
   .img_wrapper {
-    height: 125px;
-    width: 125px;
+    height: $iconSize;
+    width: $iconSize;
     background: $primaryColor;
     display: flex;
     flex-direction: column;
