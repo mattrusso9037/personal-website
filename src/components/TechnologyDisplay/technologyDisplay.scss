@@ -1,0 +1,51 @@
+@import '../../common/variables';
+
+.TechnologyDisplay {
+  .technology_container {
+    width: 100%;
+    display: block;
+    > h2 {
+      font-weight: normal;
+    }
+    > hr {
+      background: $fire_opal;
+      border: 1px solid $fire_opal;
+      width: calc(100% - #{$baseUnit*25}px);
+      opacity: .8;
+    }
+    .TechItem {
+      justify-content: start;
+    }
+
+    > h2 {
+      margin: 0;
+      padding-top: $baseUnit*4px;
+    }
+
+    > ul {
+      padding-top: $baseUnit*8px;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: $baseUnit*2px;
+      padding-left: 0;
+      margin: 0;
+
+      li {
+        box-shadow: $box_shadow_1;
+        border-radius: 45px;
+        padding: $baseUnit*1px $baseUnit*2px;
+        background: #F25F5C;
+        border: $debug_border;
+        display: flex;
+        align-items: center;
+        gap: $baseUnit*1px;
+        font-size: 18px;
+        img {
+          width: 40px;
+        }
+      }
+    }
+  }
+
+}

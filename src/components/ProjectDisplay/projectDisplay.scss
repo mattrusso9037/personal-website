@@ -1,0 +1,17 @@
+.ProjectDisplay {
+  display: block;
+  background: green;
+  height: 500px;
+  > .project_container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 8px;
+    width: 100%;
+    //overflow: hidden;
+    .ProjectCard {
+      //background: orange;
+      height: 100%;
+    }
+  }
+}
