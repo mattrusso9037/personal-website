@@ -1,26 +1,43 @@
 @import '../../../common/variables.scss';
 
 .Button {
-    color: black;
-    padding: 14px 28px;
-    font-size: 16px;
-    cursor: pointer;
-    width: 150px;
-    &:focus {
-        outline: none;
-    }
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 150px;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .outline {
+  border: 2px solid $primaryColor;
+  background-color: transparent;
+  color: white;
+
+  &:hover {
+    background: $primaryColor;
+    -webkit-transition: background-color .3s ease;
+    -moz-transition: background-color .3s ease;
+    -o-transition: background-color .3s ease;
+    transition: background-color .3s ease;
     border: 2px solid $primaryColor;
-    background-color: transparent;
-    color: white;
-    &:hover {
-        background: $primaryColor;
-        -webkit-transition: background-color .3s ease;
-        -moz-transition: background-color .3s ease;
-        -o-transition: background-color .3s ease;
-        transition: background-color .3s ease;
-        border: 2px solid $primaryColor;
-    }
+  }
+}
+
+.secondary {
+  border: 2px solid $primaryColor;
+  color: white;
+  background: $primaryColor;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  &:hover {
+    box-shadow: $box_shadow_1;
+  }
+
+
 }

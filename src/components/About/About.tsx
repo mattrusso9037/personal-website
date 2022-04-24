@@ -2,6 +2,7 @@ import React, {FC, MutableRefObject} from 'react';
 import './about.scss';
 import {Section} from '../common/Section/Section';
 import {Icon} from '../common/Icon';
+import {MyStory} from '../MyStory/MyStory';
 
 
 interface IAboutProps {
@@ -27,7 +28,7 @@ export const About: FC<IAboutProps> = ({aboutRef}) => {
                     </div>
                     <img alt={'me'} src={'/assets/matt.jpg'}/>
                 </div>
-
+                <MyStory />
             </Section>
         </div>
     )
