@@ -1,0 +1,74 @@
+$transformation: all 2s ease;
+@import '../../../common/variables';
+
+.ProjectModalBody {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  -webkit-transition: $transformation;
+  -moz-transition: $transformation;
+  -o-transition: $transformation;
+  transition: $transformation;
+
+  > .img-container {
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    > div {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    > img {
+      width: 100%;
+    }
+  }
+
+  > .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 3;
+    padding: 24px;
+    text-align: start;
+    box-shadow:  0 0 15px 0 $gray75;
+    height: 90%;
+    > div {
+      justify-content: center;
+      height: 100%;
+      background: cadetblue;
+      display: flex;
+      flex-direction: column;
+      gap: #{$baseUnit*2}px;
+      > .ProjectModalItem {
+        display: flex;
+        flex-direction: column;
+        gap: #{$baseUnit}px;
+        > label {
+          font-weight: bold;
+        }
+
+        > text {
+
+        }
+      }
+    }
+    > .action-container {
+      height: 10%;
+      background: blue;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: end;
+    }
+
+
+  }
+}

@@ -12,7 +12,7 @@ interface IAboutProps {
 export const About: FC<IAboutProps> = ({aboutRef}) => {
     return (
         <div className={'About'} ref={aboutRef}>
-            <Section title={'About Me'} icon={Icon.Code}>
+            <Section title={'About Me'} icon={Icon.Communication}>
                 <div>
                     <div className={'description_container'}>
                         <div>

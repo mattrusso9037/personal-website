@@ -50,7 +50,7 @@ const techConfig: TechItem[] = [
 export const TechnologyDisplay: React.FC<IProjectCardProps> = () => {
     return (
         <div className={'TechnologyDisplay'}>
-            <Section title={'Technologies'} icon={Icon.Design}>
+            <Section title={'Technologies'} icon={Icon.Code}>
 
                 <div className={'technology_container'}>
                     <h2>

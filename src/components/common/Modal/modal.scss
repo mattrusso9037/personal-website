@@ -1,0 +1,46 @@
+$transformation: all 2s ease;
+
+.Modal {
+  > .overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: black;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    opacity: .4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  > .card {
+    z-index: 3;
+    background: white;
+    width: 66%;
+    height: 66%;
+    position: fixed;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    > .content {
+      color: black;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  > .action-container {
+    position: fixed;
+    bottom: 24px;
+    right: 25%;
+    z-index: 3;
+  }
+}

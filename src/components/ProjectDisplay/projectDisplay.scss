@@ -1,7 +1,8 @@
 .ProjectDisplay {
   display: block;
-  background: green;
+  //background: green;
   height: 500px;
+  width: 100%;
   > .project_container {
     height: 100%;
     display: grid;
@@ -9,9 +10,5 @@
     grid-gap: 8px;
     width: 100%;
     //overflow: hidden;
-    .ProjectCard {
-      //background: orange;
-      height: 100%;
-    }
   }
 }

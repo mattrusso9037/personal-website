@@ -1,6 +1,50 @@
+@import '../../../common/variables';
+
+$transformation: all .5s ease;
+
 .ProjectCard {
-  background: pink;
+  background: white;
+  color: black;
+  height: 300px;
   min-width: 300px;
   border-radius: 4px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: $box_shadow_1;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    cursor: pointer;
+    > .content > .description {
+      opacity: 1;
+    }
+  }
+  > .overlay {
+    height: 100%;
+    width: 100%;
+    background: black;
+    opacity: .6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+  > .content {
+    z-index: 3;
+    color: white;
+    position: relative;
+    > .description {
+      opacity: 0;
+      -webkit-transition: $transformation;
+      -moz-transition: $transformation;
+      -o-transition: $transformation;
+      transition: $transformation;
+    }
+    > .h3 {
+      font-weight: bold;
+    }
+  }
 }
