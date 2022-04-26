@@ -3,6 +3,18 @@
 .App {
   text-align: center;
   font-family: 'Roboto', sans-serif;
+  &.modal-open {
+    overflow: hidden;
+    height: auto !important;
+    > .main_content {
+      overflow: hidden;
+      height: auto !important;
+    }
+    body {
+      overflow: hidden;
+      height: auto !important;
+    }
+  }
   .main_content {
     background: $bgColor;
   }

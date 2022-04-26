@@ -17,14 +17,15 @@ export const ProjectModalBody: React.FC<IProjectModalBodyProps> = ({project}) =>
 
     return (
         <div className={'ProjectModalBody'}>
-            <div className={'img-container'} style={{backgroundImage: `url(/assets/projects/${project.featuredImageUri})`}}>
+            <div className={'img-container'}
+                 style={{backgroundImage: `url(/assets/projects/${project.featuredImageUri})`}}>
             </div>
             <div className={'content'}>
                 <h2>{project.title}</h2>
                 <div>
-                    <ProjectModalItem title={'What Is It'} content={project.definition}/>
-                    <ProjectModalItem title={'What I Did'} content={project.responsibility}/>
-                    <ProjectModalItem title={'Technologies Used'} content={project.technologiesUsed}/>
+                    <ProjectModalItem title={'What Is It?'} content={project.definition}/>
+                    <ProjectModalItem title={'Responsibilities'} content={project.responsibility}/>
+                    <ProjectModalItem title={'Technologies'} content={project.technologiesUsed}/>
                 </div>
                 <div className={'action-container'}>
                     {project.sourceControlUrl && (
@@ -35,12 +36,13 @@ export const ProjectModalBody: React.FC<IProjectModalBodyProps> = ({project}) =>
                             onClick={() => openLink(project.sourceControlUrl
                             )}
                         />)}
-                    <FontAwesomeIcon
-                        color={'#F25F5C'}
-                        size={'2x'}
-                        icon={faExternalLink}
-                        onClick={() => openLink(project.resourceUrl)}
-                    />
+                    {project.resourceUrl && (
+                        <FontAwesomeIcon
+                            color={'#F25F5C'}
+                            size={'2x'}
+                            icon={faExternalLink}
+                            onClick={() => openLink(project.resourceUrl)}
+                        />)}
                 </div>
             </div>
         </div>

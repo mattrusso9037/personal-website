@@ -9,6 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -16,5 +17,6 @@ code {
 
 html, body, #root, .App, .main_content {
   height: 100vh;
+  //overflow: hidden;
   background: $gray75;
 }

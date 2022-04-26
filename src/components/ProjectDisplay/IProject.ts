@@ -7,5 +7,5 @@ export interface IProject {
     thumbnailImageUri: string;
     featuredImageUri: string;
     sourceControlUrl?: string;
-    resourceUrl: string;
+    resourceUrl?: string;
 }

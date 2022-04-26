@@ -4,7 +4,6 @@ import {Section} from '../common/Section/Section';
 import {Icon} from '../common/Icon';
 import {MyStory} from '../MyStory/MyStory';
 
-
 interface IAboutProps {
     aboutRef: MutableRefObject<null | HTMLDivElement>;
 }
@@ -26,7 +25,7 @@ export const About: FC<IAboutProps> = ({aboutRef}) => {
                         to where I am today, working with a variety of clients and technologies along the way.
                     </div>
                 </div>
-                <img alt={'me'} src={'/assets/matt.jpg'}/>
+                <img alt={'me'} src={'/assets/me.jpg'}/>
             </div>
             <MyStory/>
         </Section>

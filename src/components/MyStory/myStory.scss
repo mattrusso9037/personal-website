@@ -6,9 +6,11 @@ $transformation: all .5s ease;
   width: 100%;
   margin-top: #{$baseUnit*8}px !important;
   gap: #{$baseUnit*8}px !important;
+
   > h2 {
     margin: 0;
   }
+
   > .card-container {
     display: flex;
     gap: $baseUnit;
@@ -34,6 +36,8 @@ $transformation: all .5s ease;
       transform: scale(.75);
       padding: 8px;
       border: 1px solid white;
+      max-width: 90%;
+
       &:hover {
         cursor: pointer;
         border: 1px solid #61dafb;
@@ -81,7 +85,21 @@ $transformation: all .5s ease;
   .MyStory {
     > .card-container {
       flex-direction: column;
+      width: 100%;
+      > .card {
+        transform: scale(.6);
+
+        &.active {
+          align-self: center;
+          transform: scale(.8);
+        }
+
+        > h2 {
+          font-size: 26px;
+        }
+      }
     }
+
     > .action-container {
       display: none;
     }

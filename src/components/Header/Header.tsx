@@ -1,5 +1,4 @@
 import React, {FC} from 'react';
-import img from '../../../public/assets/nasa_img.jpg';
 import './header.scss';
 import {Button} from '../common/Button/Button';
 import {ScrollTo} from '../../hooks/useScroll';

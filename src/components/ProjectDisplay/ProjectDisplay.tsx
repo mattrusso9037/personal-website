@@ -25,6 +25,8 @@ export interface IProjectDisplayProps {
     projects: IProject[];
     theme?: ITheme;
     dimensions?: ISize;
+    showModal: boolean;
+    setShowModal: (show: boolean) => void;
 }
 
 
@@ -33,9 +35,10 @@ export const ProjectDisplay: React.FC<IProjectDisplayProps> =
          projects = [],
          theme = DEFAULT_THEME,
          dimensions = DEFAULT_DIMENSIONS,
+        showModal,
+        setShowModal,
      }) => {
         const [projectIndex, setProjectIndex] = useState<number>(0);
-        const [showModal, setShowModal] = useState<boolean>(false);
 
         function onProjectSelected(index: number): void {
             setProjectIndex(index);
