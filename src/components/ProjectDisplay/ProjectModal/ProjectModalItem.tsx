@@ -1,6 +1,5 @@
 import * as React from 'react';
 import './projectModal.scss';
-import {IProject} from "../IProject";
 
 interface IProjectModalItemProps {
     title: string;

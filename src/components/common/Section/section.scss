@@ -1,12 +1,16 @@
 @import '../../../common/variables.scss';
 
 .Section {
-  min-height: 100vh;
+  border-radius: $card_border_radius;
+  box-shadow: $box_shadow_1;
+  border: 1px solid orange;
   color: white;
   padding: $baseUnit*8px $baseUnit*4px;
   border: $debug_border;
   max-width: 850px;
   margin: auto;
+  margin-top: #{$baseUnit*6}px;
+  margin-bottom: #{$baseUnit*6}px;
   > .section_header {
     display: grid;
     grid-template-columns: fit-content(100%) fit-content(100%) 1fr;
@@ -29,21 +33,6 @@
     border: $debug_border;
     padding-top: $baseUnit*4px;
     display: flex;
-    //gap: $baseUnit*8px;
     flex-wrap: wrap;
-  }
-}
-
-//@media screen and (max-width: 1600px) {
-//  .Section {
-//    padding: $baseUnit*9px;
-//    margin: $baseUnit*9px;
-//  }
-//}
-
-@media screen and (max-width: 1200px) {
-  .Section {
-    //padding: $baseUnit*9px;
-    //margin: $baseUnit*2px;
   }
 }

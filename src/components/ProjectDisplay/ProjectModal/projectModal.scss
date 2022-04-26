@@ -39,11 +39,9 @@ $transformation: all 2s ease;
     padding: 24px;
     text-align: start;
     box-shadow:  0 0 15px 0 $gray75;
-    height: 90%;
     > div {
       justify-content: center;
       height: 100%;
-      background: cadetblue;
       display: flex;
       flex-direction: column;
       gap: #{$baseUnit*2}px;
@@ -51,6 +49,10 @@ $transformation: all 2s ease;
         display: flex;
         flex-direction: column;
         gap: #{$baseUnit}px;
+        background: $gainsboro;
+        padding: #{$baseUnit*1.5}px;
+        border-radius: 16px;
+        box-shadow: $box_shadow_light;
         > label {
           font-weight: bold;
         }
@@ -62,11 +64,14 @@ $transformation: all 2s ease;
     }
     > .action-container {
       height: 10%;
-      background: blue;
+      //background: blue;
       width: 100%;
       display: flex;
       flex-direction: row;
       justify-content: end;
+      > svg:hover {
+        cursor: pointer;
+      }
     }
 
 

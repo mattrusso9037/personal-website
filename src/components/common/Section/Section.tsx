@@ -1,15 +1,16 @@
-import React, {FC} from "react";
+import React, {FC, MutableRefObject} from "react";
 import './section.scss';
 import {Icon} from "../Icon";
 
 interface ISectionProps {
     title: string;
     icon: Icon;
+    locationRef?: MutableRefObject<any>;
 }
 
-export const Section: FC<ISectionProps> = ({title, children, icon}) => {
+export const Section: FC<ISectionProps> = ({title, locationRef, children, icon}) => {
     return (
-        <div className={`Section ${title}`}>
+        <div ref={locationRef} className={`Section ${title}`}>
             <div className={'section_header'}>
                 <img alt={icon} src={`/assets/${icon}.svg`}/>
                 <h2>{title}</h2>

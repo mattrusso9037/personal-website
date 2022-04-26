@@ -1,7 +1,10 @@
+@import '../../common/variables.scss';
+
+.Section.Projects {
+  background: $morning_blue;
+}
 .ProjectDisplay {
   display: block;
-  //background: green;
-  height: 500px;
   width: 100%;
   > .project_container {
     height: 100%;
@@ -9,6 +12,13 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 8px;
     width: 100%;
-    //overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ProjectDisplay {
+    > .project_container {
+      grid-template-columns: 1fr;
+    }
   }
 }

@@ -4,7 +4,8 @@ export interface IProject {
     definition: string;
     responsibility: string;
     technologiesUsed: string;
-    imageUri: string;
-    link?: string;
-    sourceControlUri?: string;
+    thumbnailImageUri: string;
+    featuredImageUri: string;
+    sourceControlUrl?: string;
+    resourceUrl: string;
 }

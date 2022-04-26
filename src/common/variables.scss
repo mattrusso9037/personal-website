@@ -1,11 +1,20 @@
 $fire_opal: #F25F5C;
 $gray75: #50514F;
+$persian_green: #18a999;
+$lavender_web: #d8ddef;
+$minion_yellow: #fde74c;
+$honey_yellow: #f6ae2d;
+$floral_white: #fbfbf2;
+$gainsboro: #dfdfdf;
+$morning_blue: #86a59c;
 $baseUnit: 8;
+$card_border_radius: 5px;
 
 $primaryColor: $fire_opal;
 $bgColor: $gray75;
 $debug_border: none;
 $box_shadow_1: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+$box_shadow_light: 2px 3px 5px -1px #999999;
 
 :export {
   $fire_opal: $fire_opal;

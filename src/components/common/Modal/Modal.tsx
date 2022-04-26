@@ -1,6 +1,7 @@
 import * as React from 'react';
 import './modal.scss';
-import {Button} from "../Button/Button";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faClose} from "@fortawesome/free-solid-svg-icons";
 
 interface IModalProps {
     show: boolean;
@@ -12,12 +13,12 @@ export const Modal: React.FC<IModalProps> = ({show, onClose, children}) => {
         <div style={{display: show ? 'block' : 'none'}} className={'Modal'}>
             <div className={'overlay'} />
             <div className={'card'}>
+                <div className={'action-container'}>
+                    <FontAwesomeIcon icon={faClose} size={'2x'} onClick={onClose} color={'#F25F5C'} />
+                </div>
                 <div className={'content'}>
                     {children}
                 </div>
-            </div>
-            <div className={'action-container'}>
-                <Button type={'secondary'} text={'Close'} onClick={onClose} />
             </div>
         </div>
     );

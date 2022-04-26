@@ -1,3 +1,4 @@
+@import '../../../common/variables';
 $transformation: all 2s ease;
 
 .Modal {
@@ -19,6 +20,7 @@ $transformation: all 2s ease;
   }
 
   > .card {
+    border-radius: $card_border_radius;
     z-index: 3;
     background: white;
     width: 66%;
@@ -35,12 +37,37 @@ $transformation: all 2s ease;
       height: 100%;
       width: 100%;
     }
-  }
 
-  > .action-container {
-    position: fixed;
-    bottom: 24px;
-    right: 25%;
-    z-index: 3;
+    > .action-container {
+      position: absolute;
+      top: -40px;
+      cursor: pointer;
+      z-index: 3;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Modal {
+    > .card {
+      height: calc(100% - 40px);
+      width: 100%;
+      margin: 0;
+      margin-top: auto;
+      > .action-container {
+        top: -35px;
+        left: 4px
+      }
+      .ProjectModalBody {
+        flex-direction: column;
+        > .content {
+          gap: #{$baseUnit*2}px;
+          > h2 {
+            margin-top: 4px;
+            margin-bottom: 4px;
+          }
+        }
+      }
+    }
   }
 }
