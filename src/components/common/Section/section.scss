@@ -36,3 +36,11 @@
     flex-wrap: wrap;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .Section > .section_header > hr {
+    width: 100%;
+    justify-self: center;
+    margin-left: 10px;
+  }
+}

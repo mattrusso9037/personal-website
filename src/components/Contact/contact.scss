@@ -1,0 +1,25 @@
+@import '../../common/variables';
+
+.Contact {
+  > .body {
+    justify-content: center;
+  }
+  //width: 100%;
+  > .action_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: #{$baseUnit*4}px;
+    margin-top: #{$baseUnit*4}px;
+    > .social_container {
+      display: flex;
+      flex-direction: row;
+      gap: #{$baseUnit*4}px;
+      svg {
+        cursor: pointer;
+      }
+    }
+  }
+}

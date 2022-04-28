@@ -7,6 +7,7 @@ import {useScroll} from '../../hooks/useScroll';
 import {ProjectDisplay} from "../ProjectDisplay/ProjectDisplay";
 import {mockProjects} from "../ProjectDisplay/mockProjects";
 import {TechnologyDisplay} from "../TechnologyDisplay/TechnologyDisplay";
+import {Contact} from "../Contact/Contact";
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
                 <About aboutRef={getRef(Sections.About)}/>
                 <TechnologyDisplay />
                 <ProjectDisplay projects={mockProjects} showModal={showModal} setShowModal={setShowModal} />
-                {/*<Section title={'Contact'} icon={Icon.Communication} />*/}
+                <Contact />
             </div>
         </div>
     );

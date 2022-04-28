@@ -6,7 +6,10 @@
   font-size: 16px;
   cursor: pointer;
   width: 150px;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
   &:focus {
     outline: none;
   }

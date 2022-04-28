@@ -53,7 +53,7 @@ export const TechnologyDisplay: React.FC<IProjectCardProps> = () => {
 
             <div className={'technology_container'}>
                 <h2>
-                    These are a few technologies I'm familiar with
+                    Here are a few technologies I've worked with
                 </h2>
                 <ul>
                     {techConfig.map((item) => <TechnologyItem name={item.name} icon={item.icon}/>)}

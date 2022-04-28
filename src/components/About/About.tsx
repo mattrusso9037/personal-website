@@ -14,15 +14,11 @@ export const About: FC<IAboutProps> = ({aboutRef}) => {
             <div>
                 <div className={'description_container'}>
                     <div>
-                        Hi, I'm Matt! I'm a software engineer who enjoys working on the front end.
-                        I was never very good at drawing, so when I found I could create things with
-                        software, it was a wrap! I enjoy providing visually and functionally pleasing
-                        experiences to the end user.<br/><br/>I've always enjoyed the freedom and innovation
-                        provided by Android, so as a college student I started developing mobile applications. While
-                        not every project made it's way to the Play Store, I learned valuable lessons from each project.
-                        I was able to use this experience to gain an internship in software engineering, and work my way
-                        up
-                        to where I am today, working with a variety of clients and technologies along the way.
+                        Hi, I'm Matt!<br/><br/> I'm a software engineer with a strong passion for learning. I firmly believe coding is an art form,
+                        and I take pride in things like optimization, readability, scalability, extensibility and modularity.<br/><br/>
+                        I started my career building mobile apps for the Android platform for the fun of it. When I joined the industry, I began using technologies like React Native and Electron to build cross-platform mobile and desktop
+                        applications using web technologies. Since then, I've been focusing on improving my skills,
+                        learning all I can about the industry, and mentoring others.
                     </div>
                 </div>
                 <img alt={'me'} src={'/assets/me.jpg'}/>

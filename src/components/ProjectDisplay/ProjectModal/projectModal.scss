@@ -11,7 +11,7 @@ $transformation: all 2s ease;
   transition: $transformation;
 
   > .img-container {
-    background-position: top;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     flex: 4;
