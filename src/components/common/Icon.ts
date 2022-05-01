@@ -3,4 +3,5 @@ export enum Icon {
     Code = 'code',
     Implementation = 'implementation',
     Communication = 'communication',
+    Person = 'person_white',
 }

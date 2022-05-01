@@ -18,17 +18,18 @@ export const mockProjects: IProject[] = [
         definition: 'A cross platform mobile application used for tracking users spending. I couldn\'t find a minimalist budgeting app that existed and I wanted to learn a new technology, so I built Simpli Budget.',
         responsibility: 'I handled all aspects of development and deployment. I designed and implemented various user screens, a budgeting mechanism, user authentication, and the database.',
         technologiesUsed: 'Flutter, Google Cloud, Cloud Functions, FireStore, Firebase Auth, GitHub Actions',
-        featuredImageUri: 'simpli_budget_featured_2.png',
+        featuredImageUri: 'simpli_budget_featured.png',
         thumbnailImageUri: 'budget_thumb.jpg',
     },
     {
         title: 'EyeTemp',
         description: 'A Cross-Platform Mobile App',
         definition: 'An IoT device that can be placed on an appliance and alert users of temperature differentiations via a connected mobile application.',
-        responsibility: 'Implemented bug fixes and features, including a deep linking solution for two step verification. I also acted ',
+        responsibility: 'I implemented bug fixes and features, including a deep linking solution for two step verification on the cross-platform mobile application. I also acted as the release manager, owning' +
+            ' deployments the the Apple App Store and Google Play Store.',
         technologiesUsed: 'React Native, Redux, Postgres',
-        featuredImageUri: 'eyetemp_featured.jpg',
-        thumbnailImageUri: 'eyetemp_thumb.png',
+        featuredImageUri: 'eye_temp_featured.jpg',
+        thumbnailImageUri: 'eye_temp_thumb.jpg',
         resourceUrl: 'https://intelligentproduct.solutions/work/eyetemp-heat-sensor-monitor/',
     },
     {
@@ -45,7 +46,8 @@ export const mockProjects: IProject[] = [
         title: 'Age By Planet',
         description: 'Multi-Planetary Web App Utility',
         definition: 'A web app used to determine a user\'s age on different planets.',
-        responsibility: 'I created this web app out of my daughter\'s love for planets. This app was bootstrapped from create-react-app and utilized GitHub actions for CI/CD.',
+        responsibility: 'I created this web app out of my daughter\'s love for planets. This app was bootstrapped from create-react-app and utilized GitHub actions for CI/CD. ' +
+            'It uses the orbital period of each of the planets in our solar system to calculate a user\'s age on each planet.',
         technologiesUsed: 'React, TypeScript, Google Cloud, GitHub Actions',
         featuredImageUri: 'age_by_planet_featured.png',
         thumbnailImageUri: 'age_by_planet_thumb.png',

@@ -16,7 +16,7 @@ export const ProjectModalBody: React.FC<IProjectModalBodyProps> = ({project}) =>
     }
 
     return (
-        <div className={'ProjectModalBody'}>
+        <div className={`ProjectModalBody ${project.title.replaceAll(' ', '')}`}>
             <div className={'img-container'}
                  style={{backgroundImage: `url(/assets/projects/${project.featuredImageUri})`}}>
             </div>

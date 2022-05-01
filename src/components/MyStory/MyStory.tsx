@@ -6,7 +6,7 @@ import {useState} from "react";
 interface IProjectCardProps {
 }
 
-const journeySteps: Array<{title: string, content: string}> = [
+const journeySteps: Array<{ title: string, content: string }> = [
     {
         title: 'const career = new Career();',
         content: 'I created three apps during my college days, all deployed to the Google Play Store. This consisted of a flashcards app with Wear OS support, ' +
@@ -19,9 +19,10 @@ const journeySteps: Array<{title: string, content: string}> = [
     },
     {
         title: 'career.accelerate();',
-        content: 'In just three short years I went from intern to Software Lead. ' +
-            'I\'ve lead company-wide initiatives such as the intern program, recruitment, and company goals. I\'ve helped build out a cybersecurity division and have ' +
-            'taken on management responsibilities in an effort to scale the company.',
+        content: 'In just three short years I grew from an Intern to a Software Lead. ' +
+            'I\'ve architected major feature areas, integrated seamlessly with client engineering teams,' +
+            ' and have actively mentored my peers. ' +
+        'I\'ve led company-wide initiatives such as the intern program, recruitment, and a code re-usability effort.',
     },
 ];
 
@@ -50,19 +51,20 @@ export const MyStory: React.FC<IProjectCardProps> = ({}) => {
             <div className={'card-container'}>
                 {
                     journeySteps.map((step, index) => {
-                      return (
-                          <div onClick={() => setActiveIndex(index)} className={`card ${index === activeIndex ? 'active' : ''}`}>
-                              <h2>{step?.title}</h2>
-                              {index === activeIndex && <div className={'content'}>{step.content}</div>}
-                          </div>
-                      )
+                        return (
+                            <div onClick={() => setActiveIndex(index)}
+                                 className={`card ${index === activeIndex ? 'active' : ''}`}>
+                                <h2>{step?.title}</h2>
+                                {index === activeIndex && <div className={'content'}>{step.content}</div>}
+                            </div>
+                        )
                     })
                 }
             </div>
-                <div className={'action-container'}>
-                    <Button type={'secondary'} text={'Prev'} onClick={decrementIndex}/>
-                    <Button type={'secondary'} text={'Next'} onClick={incrementIndex}/>
-                </div>
+            <div className={'action-container'}>
+                <Button type={'secondary'} text={'Prev'} onClick={decrementIndex}/>
+                <Button type={'secondary'} text={'Next'} onClick={incrementIndex}/>
+            </div>
 
         </div>
     )
