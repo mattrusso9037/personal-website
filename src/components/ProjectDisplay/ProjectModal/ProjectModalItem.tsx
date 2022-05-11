@@ -10,7 +10,7 @@ export const ProjectModalItem: React.FC<IProjectModalItemProps> = ({ title, cont
     return (
         <div className={'ProjectModalItem'}>
             <label>{title}</label>
-            <text>{content}</text>
+            <div>{content}</div>
         </div>
     );
 };

@@ -56,7 +56,7 @@ export const TechnologyDisplay: React.FC<IProjectCardProps> = () => {
                     Here are a few technologies I've worked with
                 </h2>
                 <ul>
-                    {techConfig.map((item) => <TechnologyItem name={item.name} icon={item.icon}/>)}
+                    {techConfig.map((item) => <TechnologyItem key={item.name} name={item.name} icon={item.icon}/>)}
                 </ul>
             </div>
         </Section>

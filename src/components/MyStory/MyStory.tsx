@@ -26,7 +26,7 @@ const journeySteps: Array<{ title: string, content: string }> = [
     },
 ];
 
-export const MyStory: React.FC<IProjectCardProps> = ({}) => {
+export const MyStory: React.FC<IProjectCardProps> = () => {
     const [activeIndex, setActiveIndex] = useState<number>(0);
 
     function incrementIndex() {
@@ -52,7 +52,7 @@ export const MyStory: React.FC<IProjectCardProps> = ({}) => {
                 {
                     journeySteps.map((step, index) => {
                         return (
-                            <div onClick={() => setActiveIndex(index)}
+                            <div key={step.title} onClick={() => setActiveIndex(index)}
                                  className={`card ${index === activeIndex ? 'active' : ''}`}>
                                 <h2>{step?.title}</h2>
                                 {index === activeIndex && <div className={'content'}>{step.content}</div>}
