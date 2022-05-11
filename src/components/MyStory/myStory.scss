@@ -14,13 +14,12 @@ $transformation: all .5s ease;
   > .card-container {
     display: flex;
     gap: $baseUnit;
-
+    min-height: 325px;
     > .card {
       background: white;
       color: black;
       width: 100%;
       min-width: 400px;
-      //min-height: 300px;
       border-radius: $baseUnit*.5px;
       box-shadow: $box_shadow_1;
       height: 200px;
@@ -49,6 +48,7 @@ $transformation: all .5s ease;
       }
 
       &.active {
+        animation: expand-card 1s;
         border: 1px solid $fire_opal;
         height: 300px;
         transform: scale(1);
@@ -60,12 +60,14 @@ $transformation: all .5s ease;
           font-size: 22px;
           height: 32px;
         }
+        > .content {
+          animation: show-text 1s;
+        }
       }
 
       > .content {
         height: calc(100% - 48px);
         padding: 0 #{$baseUnit*1}px;
-        //height: 100%;
         line-height: 28px;
         display: flex;
         align-items: center;
@@ -92,6 +94,7 @@ $transformation: all .5s ease;
         &.active {
           align-self: center;
           transform: scale(.8);
+          animation: expand-card-mobile 1s;
         }
 
         > h2 {
@@ -104,4 +107,19 @@ $transformation: all .5s ease;
       display: none;
     }
   }
+}
+
+@keyframes expand-card {
+  0%    { transform: scale(.75); }
+  100%   { transform: scale(1); }
+}
+
+@keyframes expand-card-mobile {
+  0%    { transform: scale(.75); }
+  100%   { transform: scale(.8); }
+}
+
+@keyframes show-text {
+  0%    { opacity: 0; }
+  100%   { opacity: 1; }
 }

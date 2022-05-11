@@ -1,5 +1,4 @@
 @import '../../../common/variables';
-$transformation: display .2s ease;
 
 .Modal {
   > .overlay {
@@ -14,9 +13,13 @@ $transformation: display .2s ease;
     left: 0;
     overflow: hidden;
     opacity: .4;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
+
+    &.active {
+      display: flex;
+    }
   }
 
   > .card {
@@ -27,10 +30,15 @@ $transformation: display .2s ease;
     height: 85%;
     position: fixed;
     margin: auto;
-    top: 0;
-    bottom: 0;
+    top: 110%;
     left: 0;
     right: 0;
+    transition: all .7s ease;
+
+    &.active {
+      top: 7.5%;
+      animation: show-modal 1s;
+    }
 
     > .content {
       color: black;
@@ -40,7 +48,8 @@ $transformation: display .2s ease;
 
     > .action-container {
       position: absolute;
-      top: -40px;
+      top: 0;
+      width: 30px;
       cursor: pointer;
       z-index: 3;
     }
@@ -54,14 +63,21 @@ $transformation: display .2s ease;
       width: 100%;
       margin: 0;
       margin-top: auto;
+      &.active  {
+        top: 40px;
+        animation: show-modal-mobile 1s;
+      }
       > .action-container {
         top: -35px;
         left: 4px
       }
+
       .ProjectModalBody {
         flex-direction: column;
+
         > .content {
           gap: #{$baseUnit*2}px;
+
           > h2 {
             margin-top: 4px;
             margin-bottom: 4px;
@@ -69,5 +85,23 @@ $transformation: display .2s ease;
         }
       }
     }
+  }
+}
+
+@keyframes show-modal {
+  0% {
+    top: 110%;
+  }
+  100% {
+    top: 7.5%;
+  }
+}
+
+@keyframes show-modal-mobile {
+  0% {
+    top: 110%;
+  }
+  100% {
+    top: 40px;
   }
 }
