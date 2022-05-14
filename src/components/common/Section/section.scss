@@ -7,7 +7,7 @@
   color: white;
   padding: $baseUnit*8px $baseUnit*4px;
   border: $debug_border;
-  max-width: 850px;
+  max-width: $max_width;
   margin: auto;
   margin-top: #{$baseUnit*6}px;
   margin-bottom: #{$baseUnit*6}px;

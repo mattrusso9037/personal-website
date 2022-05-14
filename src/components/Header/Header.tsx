@@ -1,8 +1,9 @@
 import React, {FC} from 'react';
 import './header.scss';
-import {Button} from '../common/Button/Button';
 import {ScrollTo} from '../../hooks/useScroll';
 import {Sections} from '../Main/SectionTypes';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 interface IHeaderProps {
     onAboutClick: ScrollTo
@@ -21,8 +22,10 @@ export const Header: FC<IHeaderProps> =
             <div className={'Header'}>
                 <img alt={'Earth from space'} src={'/assets/nasa_img.jpg'}/>
                 <div>
-                    <h1>Hi I'm <span>Matt Russo</span>.<br/>I'm a Software Engineer.</h1>
-                    <Button text={'Learn More'} type={'outline'} onClick={onClick}/>
+                    <div>
+                        <h1>Hi I'm <span>Matt Russo</span>.<br/>I'm a Software Engineer.</h1>
+                    </div>
+                    <FontAwesomeIcon className={'fa-thin'} onClick={onClick} icon={faChevronDown} color={'white'} size={'3x'} />
                 </div>
             </div>
         )
