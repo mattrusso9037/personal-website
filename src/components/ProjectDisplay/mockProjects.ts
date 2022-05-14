@@ -26,7 +26,7 @@ export const mockProjects: IProject[] = [
         description: 'A Cross-Platform Mobile App',
         definition: 'An IoT device that can be placed on an appliance and alert users of temperature differentiations via a connected mobile application.',
         responsibility: 'I implemented bug fixes and features, including a deep linking solution for two step verification on the cross-platform mobile application. I also acted as the release manager, owning' +
-            ' deployments the the Apple App Store and Google Play Store.',
+            ' deployments to the Apple App Store and Google Play Store.',
         technologiesUsed: 'React Native, Redux, Postgres',
         featuredImageUri: 'eye_temp_featured.jpg',
         thumbnailImageUri: 'eye_temp_thumb.jpg',

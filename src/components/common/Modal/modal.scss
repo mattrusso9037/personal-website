@@ -52,6 +52,7 @@
       width: 30px;
       cursor: pointer;
       z-index: 3;
+      padding: 4px;
     }
   }
 }
@@ -59,25 +60,23 @@
 @media screen and (max-width: 600px) {
   .Modal {
     > .card {
-      height: calc(100% - 40px);
+      height: 100%;
       width: 100%;
       margin: 0;
       margin-top: auto;
       &.active  {
-        top: 40px;
+        top: 0;
         animation: show-modal-mobile 1s;
       }
-      > .action-container {
-        top: -35px;
-        left: 4px
-      }
-
       .ProjectModalBody {
         flex-direction: column;
 
         > .content {
           gap: #{$baseUnit*2}px;
-
+          padding: #{$baseUnit/2}px #{$baseUnit}px;
+          > .action-container {
+            padding: #{$baseUnit}px;
+          }
           > h2 {
             margin-top: 4px;
             margin-bottom: 4px;
@@ -102,6 +101,6 @@
     top: 110%;
   }
   100% {
-    top: 40px;
+    top: 0;
   }
 }
