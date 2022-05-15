@@ -9,53 +9,46 @@ $transformation: all 2s ease;
   -moz-transition: $transformation;
   -o-transition: $transformation;
   transition: $transformation;
-  > .img-container {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    flex: 4;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    > div {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    > img {
-      width: 100%;
-    }
-  }
-
-  > .content {
+  justify-content: center;
+   .content {
+    max-width: $max_width;
+    text-transform: uppercase;
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 3;
+    width: 100%;
+    gap: #{$baseUnit*4}px;
     padding: 24px;
     padding-bottom: 0;
     text-align: start;
-    box-shadow:  0 0 15px 0 $gray75;
-    > div {
-      justify-content: center;
-      height: 100%;
+    > .description {
+      text-transform: none;
+      line-height: $bodyLineHeight;
+    }
+    > img {
+      width: 600px;
+    }
+    > .technologies {
+      > strong {
+        align-self: center;
+      }
+      > div {
+        margin-top: #{$baseUnit*2}px;
+        > span {
+          font-size: 12px;
+          color: $gray75;
+        }
+      }
       display: flex;
       flex-direction: column;
-      gap: #{$baseUnit*2}px;
-      > .ProjectModalItem {
-        display: flex;
-        flex-direction: column;
-        gap: #{$baseUnit}px;
-        background: $gainsboro;
-        padding: #{$baseUnit*1.5}px;
-        border-radius: 16px;
-        box-shadow: $box_shadow_light;
-        > label {
-          font-weight: bold;
-        }
+      margin-top: #{$baseUnit*2}px;
+    }
+    > .img-container {
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      > img {
+        width: 100%;
       }
     }
     > .action-container {

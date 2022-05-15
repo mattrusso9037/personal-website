@@ -10,8 +10,8 @@
   transform-style: preserve-3d;
 
   &.modal-open {
-    overflow: hidden;
-    height: auto !important;
+    overflow: visible;
+    background: $gray75;
     > .main_content {
       overflow: hidden;
       height: auto !important;

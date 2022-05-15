@@ -27,6 +27,7 @@ export interface IProjectDisplayProps {
     dimensions?: ISize;
     showModal: boolean;
     setShowModal: (show: boolean) => void;
+    onProjectSelected: any;
 }
 
 
@@ -37,13 +38,9 @@ export const ProjectDisplay: React.FC<IProjectDisplayProps> =
          dimensions = DEFAULT_DIMENSIONS,
         showModal,
         setShowModal,
+         onProjectSelected,
      }) => {
-        const [projectIndex, setProjectIndex] = useState<number>(0);
 
-        function onProjectSelected(index: number): void {
-            setProjectIndex(index);
-            setShowModal(true);
-        }
 
         return (
             <Section className={'Projects'} title={''} icon={Icon.Implementation}>
@@ -54,9 +51,6 @@ export const ProjectDisplay: React.FC<IProjectDisplayProps> =
                         })}
                     </div>
                 </div>
-                <Modal show={showModal} onClose={() => setShowModal(false)}>
-                   <ProjectModalBody project={projects[projectIndex]} />
-                </Modal>
             </Section>
         )
     };

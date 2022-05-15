@@ -10,15 +10,12 @@ interface IModalProps {
 
 export const Modal: React.FC<IModalProps> = ({show, onClose, children}) => {
     return (
-        <div className={'Modal'}>
-            <div className={`overlay ${show ? 'active' : ''}`} />
-            <div className={`card ${show ? 'active' : ''}`}>
-                <div className={'action-container'}>
-                    <FontAwesomeIcon icon={faClose} size={'2x'} onClick={onClose} color={'#F25F5C'} />
-                </div>
-                <div className={'content'}>
-                    {children}
-                </div>
+        <div className={`card ${show ? 'active' : ''}`}>
+            <div className={'action-container'}>
+                <FontAwesomeIcon icon={faClose} size={'2x'} onClick={onClose} color={'#F25F5C'}/>
+            </div>
+            <div className={'content'}>
+                {children}
             </div>
         </div>
     );

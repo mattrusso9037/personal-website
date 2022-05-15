@@ -1,0 +1,10 @@
+@import '../../../common/variables';
+
+.Aurora {
+  width: 100%;
+  max-width: $max_width;
+  > iframe {
+    width: 100%;
+    min-height: 500px
+  }
+}
