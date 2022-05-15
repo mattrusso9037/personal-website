@@ -1,0 +1,26 @@
+@import '../../common/variables';
+
+.CompanyDisplay {
+  color: $secondaryColor;
+  background: $floral_white;
+  > .section_inner {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .company_container {
+    margin-top: #{$baseUnit*4}px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    grid-column-gap: #{$baseUnit*24}px;
+    grid-row-gap: #{$baseUnit*6}px;
+
+    > img {
+      height: 100px;
+      width: 300px;
+      object-fit: contain;
+    }
+  }
+}

@@ -1,16 +1,28 @@
 @import '../../common/variables.scss';
 
 .Section.Projects {
-  background: $morning_blue;
+  //background: $gray75;
+  color: $secondaryColor;
+  padding: 0;
+  > .section_inner {
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0px;
+    > .body {
+      padding-top: 0;
+    }
+  }
 }
+
 .ProjectDisplay {
   display: block;
   width: 100%;
+
   > .project_container {
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 8px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     width: 100%;
   }
 }

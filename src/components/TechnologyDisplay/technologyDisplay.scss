@@ -1,11 +1,9 @@
 @import '../../common/variables';
 
-.Section.Technologies {
-  background: $honey_yellow;
-}
-.technology_container {
+.Section.About > .section_inner > .body > .technology_container {
   width: 100%;
   display: block;
+  gap: #{$baseUnit}px;
 
   > h2 {
     font-weight: normal;
@@ -39,7 +37,6 @@
     li {
       border-radius: 45px;
       padding: $baseUnit*1px $baseUnit*2px;
-      background: #F25F5C;
       border: $debug_border;
       display: flex;
       align-items: center;

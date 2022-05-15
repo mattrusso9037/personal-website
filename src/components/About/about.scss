@@ -1,41 +1,45 @@
 @import '../../common/variables';
 
 .Section.About {
-  background: $persian_green;
-  > .body {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    font-size: 20px;
-
-    > div {
+  color: $secondaryColor;
+  background: $floral_white;
+  > .section_inner {
+    > .body {
       display: flex;
-      flex-direction: row;
-      padding: $baseUnit*2px 0;
-      gap: $baseUnit*12px;
       flex-wrap: wrap;
-      justify-content: center;
-      .description_container {
+      justify-content: space-evenly;
+      font-size: 20px;
+
+      > div {
         display: flex;
-        flex-direction: column;
-        gap: $baseUnit*4px;
-        text-align: left;
-        flex: 2;
-        min-width: 300px;
-      }
+        flex-direction: row;
+        padding: $baseUnit*2px 0;
+        gap: $baseUnit*12px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .description_container {
+          display: flex;
+          flex-direction: column;
+          gap: $baseUnit*4px;
+          text-align: left;
+          flex: 2;
+          min-width: 300px;
+        }
 
 
-      > img {
-        object-fit: cover;
-        height: 250px;
-        border-radius: $card_border_radius;
-        box-shadow: $box_shadow_1;
-      }
+        > img {
+          object-fit: cover;
+          height: 250px;
+          border-radius: $card_border_radius;
+          box-shadow: $box_shadow_1;
+        }
 
-      .portrait_container {
-        height: 300px;
-        width: 300px;
-        border: 1px solid red;
+        .portrait_container {
+          height: 300px;
+          width: 300px;
+          border: 1px solid red;
+        }
       }
     }
   }
@@ -43,9 +47,11 @@
 
 @media screen and (max-width: 1600px) {
   .Section {
-    > .body {
-      > div {
-        justify-content: center;
+    > .section_inner {
+      > .body {
+        > div {
+          justify-content: center;
+        }
       }
     }
   }

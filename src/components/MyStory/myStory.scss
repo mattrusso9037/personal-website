@@ -1,85 +1,35 @@
 @import '../../common/variables';
 
 $transformation: all .5s ease;
-
-.MyStory {
-  width: 100%;
-  margin-top: #{$baseUnit*8}px !important;
-  gap: #{$baseUnit*8}px !important;
-
-  > h2 {
-    margin: 0;
+.AboutMeCta {
+  background: white;
+  color: $secondaryColor;
+  > .section_inner {
+    margin-top: 0;
+    margin-bottom: 0;
   }
-
-  > .card-container {
+  .MyStory {
     display: flex;
-    gap: $baseUnit;
-    min-height: 325px;
-    > .card {
-      background: white;
-      color: black;
-      width: 100%;
-      min-width: 400px;
-      border-radius: $baseUnit*.5px;
-      box-shadow: $box_shadow_1;
-      height: 200px;
-      align-content: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      -webkit-transition: $transformation;
-      -moz-transition: $transformation;
-      -o-transition: $transformation;
-      transition: $transformation;
-      align-self: center;
-      transform: scale(.75);
-      padding: 8px;
-      border: 1px solid white;
-      max-width: 90%;
-
-      &:hover {
-        cursor: pointer;
-        border: 1px solid #61dafb;
-      }
-
-      > h2 {
-        padding: #{$baseUnit}px;
-        font-family: monospace;
-      }
-
-      &.active {
-        animation: expand-card 1s;
-        border: 1px solid $fire_opal;
-        height: 300px;
-        transform: scale(1);
-        display: grid;
-        grid-template-rows: 64px 1fr;
-        align-self: normal;
-
-        > h2 {
-          font-size: 22px;
-          height: 32px;
-        }
-        > .content {
-          animation: show-text 1s;
-        }
-      }
-
-      > .content {
-        height: calc(100% - 48px);
-        padding: 0 #{$baseUnit*1}px;
-        line-height: 28px;
-        display: flex;
-        align-items: center;
-      }
+    flex-direction: column;
+    font-size: 24px;
+    width: 100%;
+    margin-top: #{$baseUnit*8}px !important;
+    gap: #{$baseUnit*8}px !important;
+    text-align: left;
+    > .Button {
+      align-self: end;
     }
-  }
 
-  > .action-container {
-    gap: 16px;
-    height: 48px;
-    display: flex;
-    justify-content: space-between;
+    > .card-container {
+      display: flex;
+    }
+
+    > .action-container {
+      gap: 16px;
+      height: 48px;
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
 
@@ -88,38 +38,10 @@ $transformation: all .5s ease;
     > .card-container {
       flex-direction: column;
       width: 100%;
-      > .card {
-        transform: scale(.6);
-
-        &.active {
-          align-self: center;
-          transform: scale(.8);
-          animation: expand-card-mobile 1s;
-        }
-
-        > h2 {
-          font-size: 26px;
-        }
-      }
     }
 
     > .action-container {
       display: none;
     }
   }
-}
-
-@keyframes expand-card {
-  0%    { transform: scale(.75); }
-  100%   { transform: scale(1); }
-}
-
-@keyframes expand-card-mobile {
-  0%    { transform: scale(.75); }
-  100%   { transform: scale(.8); }
-}
-
-@keyframes show-text {
-  0%    { opacity: 0; }
-  100%   { opacity: 1; }
 }

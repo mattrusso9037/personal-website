@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './myStory.scss';
 import {Button} from '../common/Button/Button';
-import {useState} from "react";
+import {Section} from "../common/Section/Section";
 
 interface IProjectCardProps {
 }
@@ -22,50 +22,22 @@ const journeySteps: Array<{ title: string, content: string }> = [
         content: 'In just three short years I grew from an Intern to a Software Lead. ' +
             'I\'ve architected major feature areas, integrated seamlessly with client engineering teams,' +
             ' and have actively mentored my peers. ' +
-        'I\'ve led company-wide initiatives such as the intern program, recruitment, and a code re-usability effort.',
+            'I\'ve led company-wide initiatives such as the intern program, recruitment, and a code re-usability effort.',
     },
 ];
 
 export const MyStory: React.FC<IProjectCardProps> = () => {
-    const [activeIndex, setActiveIndex] = useState<number>(0);
-
-    function incrementIndex() {
-        const nextIndex = activeIndex + 1;
-
-        if (nextIndex < journeySteps.length) {
-            setActiveIndex(nextIndex);
-        }
-    }
-
-    function decrementIndex() {
-        const nextIndex = activeIndex - 1;
-
-        if (nextIndex >= 0) {
-            setActiveIndex(nextIndex);
-        }
-    }
-
     return (
-        <div className={'MyStory'}>
-            <h2>My Journey</h2>
-            <div className={'card-container'}>
-                {
-                    journeySteps.map((step, index) => {
-                        return (
-                            <div key={step.title} onClick={() => setActiveIndex(index)}
-                                 className={`card ${index === activeIndex ? 'active' : ''}`}>
-                                <h2>{step?.title}</h2>
-                                {index === activeIndex && <div className={'content'}>{step.content}</div>}
-                            </div>
-                        )
-                    })
-                }
-            </div>
-            <div className={'action-container'}>
-                <Button type={'secondary'} text={'Prev'} onClick={decrementIndex}/>
-                <Button type={'secondary'} text={'Next'} onClick={incrementIndex}/>
-            </div>
+        <Section className={'AboutMeCta'} title={''}>
+            <div className={'MyStory'}>
+                <div className={'card-container'}>
+                    I'm currently a Software Lead at Intelligent Product Solutions. I've been working as part of an
+                    R&D-turned product team at Zebra Technologies for the last three years,
+                    architecting and implementing feature areas in the machine vision space.
 
-        </div>
+                </div>
+                <Button type={'secondary'} text={'See More'}/>
+            </div>
+        </Section>
     )
 };
