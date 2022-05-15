@@ -4,13 +4,9 @@ import {Section} from '../common/Section/Section';
 import {Icon} from '../common/Icon';
 import {TechnologyDisplay} from "../TechnologyDisplay/TechnologyDisplay";
 
-interface IAboutProps {
-    aboutRef: MutableRefObject<null | HTMLDivElement>;
-}
-
-export const About: FC<IAboutProps> = ({aboutRef}) => {
+export const About: FC = () => {
     return (
-        <Section className={'About Me'} locationRef={aboutRef} title={'About Me'} icon={Icon.Person}>
+        <Section className={'About Me'} title={'About Me'} icon={Icon.Person}>
             <div>
                 <div className={'description_container'}>
                     <div>

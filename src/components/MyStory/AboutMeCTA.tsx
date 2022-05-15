@@ -3,6 +3,7 @@ import './myStory.scss';
 import {Button} from '../common/Button/Button';
 import {Section} from "../common/Section/Section";
 import {MutableRefObject} from "react";
+import { useNavigate } from "react-router-dom";
 
 interface IAboutMeCTAProps {
     aboutRef: MutableRefObject<null | HTMLDivElement>;
@@ -29,6 +30,8 @@ const journeySteps: Array<{ title: string, content: string }> = [
 ];
 
 export const AboutMeCTA: React.FC<IAboutMeCTAProps> = ({ aboutRef }) => {
+    const navigate = useNavigate();
+
     return (
         <Section locationRef={aboutRef} className={'AboutMeCta'} title={''}>
             <div className={'MyStory'}>
@@ -37,7 +40,7 @@ export const AboutMeCTA: React.FC<IAboutMeCTAProps> = ({ aboutRef }) => {
                     R&D-turned product team at Zebra Technologies for the last three years,
                     architecting and implementing feature areas in the machine vision space.
                 </div>
-                <Button type={'secondary'} text={'See More'}/>
+                <Button type={'secondary'} text={'See More'} onClick={() => navigate('/about')} />
             </div>
         </Section>
     )
