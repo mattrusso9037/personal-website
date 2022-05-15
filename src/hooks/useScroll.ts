@@ -23,9 +23,8 @@ export const useScroll = ({}: IUseScrollParams): IUseScroll => {
     const scrollToElement: ScrollTo = (containerId) => {
         const ref: MutableRefObject<HTMLDivElement | null> = refMap[containerId];
 
-        window.scrollTo({
+        ref?.current?.scrollIntoView({
             behavior: 'smooth',
-            top: ref.current?.offsetTop,
         });
     };
 

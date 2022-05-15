@@ -8,6 +8,8 @@ import {ProjectDisplay} from "../ProjectDisplay/ProjectDisplay";
 import {mockProjects} from "../ProjectDisplay/mockProjects";
 import {TechnologyDisplay} from "../TechnologyDisplay/TechnologyDisplay";
 import {Contact} from "../Contact/Contact";
+import {AboutMeCTA} from "../MyStory/AboutMeCTA";
+import {CompanyDisplay} from "../CompanyDisplay/CompanyDisplay";
 
 
 function App() {
@@ -18,8 +20,9 @@ function App() {
         <div className={`App ${showModal ? 'modal-open' : ''}`}>
             <Header onAboutClick={scrollToElement}/>
             <div className={'main_content'}>
-                <About aboutRef={getRef(Sections.About)}/>
-                <TechnologyDisplay />
+                {/*<About aboutRef={getRef(Sections.About)}/>*/}
+                <AboutMeCTA  aboutRef={getRef(Sections.About)} />
+                <CompanyDisplay />
                 <ProjectDisplay projects={mockProjects} showModal={showModal} setShowModal={setShowModal} />
                 <Contact />
             </div>

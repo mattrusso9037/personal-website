@@ -1,10 +1,16 @@
 @import '../../common/variables.scss';
+$scroll-factor: .5;
 
 .Header {
   background: black;
   height: calc(100vh - 1px);
   border-bottom: 1px solid $primaryColor;
 
+  margin-left: -6px;
+  position: relative;
+  vertical-align: top;
+  transform-origin: center top;
+  transform: translateZ(-#{$scroll-factor * 2}px) scale(1 + $scroll-factor * 2);
   img {
     height: 100%;
     width: 100%;
