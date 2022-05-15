@@ -1,21 +1,23 @@
 @import '../../../common/variables';
+$initialModalPosition: 100%;
 
 .card {
   z-index: 3;
   background: white;
   width: 100%;
   height: 100%;
-  position: fixed;
+  position: relative;
   margin: auto;
-  top: -200%;
+  top: $initialModalPosition;
   left: 0;
   right: 0;
-  transition: all .7s ease;
-
+  visibility: hidden;
+  transition: all 1s ease-in-out 0s;
   &.active {
-    top: 0;
+    top: 75px;
     height: 100vh;
-    animation: show-modal 1s;
+    display: flex;
+    visibility: visible;
   }
 
   > .content {
@@ -42,7 +44,7 @@
     margin-top: auto;
 
     &.active {
-      top: 0;
+      top: $navBarHeight;
       animation: show-modal-mobile 1s;
     }
 
@@ -66,29 +68,12 @@
   }
 }
 
-@keyframes show-modal {
-  0% {
-    top: -200%;
-  }
-  100% {
-    top: 0;
-  }
-}
-
-@keyframes hide-modal {
-  0% {
-    top: 0;
-  }
-  100% {
-    top: -200%;
-  }
-}
 
 @keyframes show-modal-mobile {
   0% {
-    top: 110%;
+    top: $initialModalPosition;
   }
   100% {
-    top: 0;
+    top: $navBarHeight;
   }
 }
