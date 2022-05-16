@@ -2,21 +2,14 @@
 
 .App {
   text-align: center;
-  font-family: 'Roboto', sans-serif;
-  &.modal-open {
-    overflow: hidden;
-    height: auto !important;
-    > .main_content {
-      overflow: hidden;
-      height: auto !important;
-    }
-    body {
-      overflow: hidden;
-      height: auto !important;
-    }
-  }
+
+  overflow-x: hidden;
+  perspective: 1px;
+  perspective-origin: center top;
+  transform-style: preserve-3d;
   .main_content {
-    background: $bgColor;
+    background: white;
+    perspective: 4px;
   }
 }
 

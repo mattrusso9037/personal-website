@@ -1,43 +1,29 @@
 @import '../../../common/variables';
 
+$initialModalPosition: 100%;
+
 .Modal {
-  > .overlay {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    background: black;
-    z-index: 2;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    opacity: .4;
-    display: none;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
 
-    &.active {
-      display: flex;
-    }
-  }
-
-  > .card {
-    border-radius: $card_border_radius;
+  .card {
+    transform: translateY(125%);
+    overflow: scroll;
+    background: $floral_white;
     z-index: 3;
-    background: white;
-    width: 85%;
-    height: 85%;
-    position: fixed;
+    width: 100%;
+    position: absolute;
     margin: auto;
-    top: 110%;
-    left: 0;
-    right: 0;
-    transition: all .7s ease;
+    top: 0;
+    transition: all 1s ease-in-out 0s;
+    flex-direction: column;
 
     &.active {
-      top: 7.5%;
-      animation: show-modal 1s;
+      transform: translateY(0);
+      height: 100vh;
+      display: flex;
+      overflow-x: hidden;
     }
 
     > .content {
@@ -47,61 +33,38 @@
     }
 
     > .action-container {
-      position: absolute;
+      position: sticky;
+      background: black;
+      opacity: .8;
+      color: white;
       top: 0;
-      width: 30px;
+      width: 100%;
       cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       z-index: 3;
+      padding: 4px;
     }
   }
 }
 
 @media screen and (max-width: 600px) {
-  .Modal {
-    > .card {
-      height: calc(100% - 40px);
-      width: 100%;
-      margin: 0;
-      margin-top: auto;
-      &.active  {
-        top: 40px;
-        animation: show-modal-mobile 1s;
-      }
-      > .action-container {
-        top: -35px;
-        left: 4px
-      }
+  .card {
+    .ProjectModalBody {
+      > .content {
+        gap: #{$baseUnit*2}px;
+        padding: #{$baseUnit/2}px #{$baseUnit}px;
 
-      .ProjectModalBody {
-        flex-direction: column;
+        > .action-container {
+          padding: #{$baseUnit}px;
+        }
 
-        > .content {
-          gap: #{$baseUnit*2}px;
-
-          > h2 {
-            margin-top: 4px;
-            margin-bottom: 4px;
-          }
+        > h2 {
+          margin-top: 4px;
+          margin-bottom: 4px;
         }
       }
     }
-  }
-}
-
-@keyframes show-modal {
-  0% {
-    top: 110%;
-  }
-  100% {
-    top: 7.5%;
-  }
-}
-
-@keyframes show-modal-mobile {
-  0% {
-    top: 110%;
-  }
-  100% {
-    top: 40px;
   }
 }

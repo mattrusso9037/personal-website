@@ -1,7 +1,5 @@
 import * as React from 'react';
 import './technologyDisplay.scss';
-import {Section} from "../common/Section/Section";
-import {Icon} from "../common/Icon";
 import {TechnologyItem} from './TechnologyItem/TechnologyItem';
 
 interface IProjectCardProps {
@@ -49,17 +47,16 @@ const techConfig: TechItem[] = [
 
 export const TechnologyDisplay: React.FC<IProjectCardProps> = () => {
     return (
-        <Section title={'Technologies'} icon={Icon.Code}>
-
             <div className={'technology_container'}>
-                <h2>
-                    Here are a few technologies I've worked with
-                </h2>
-                <ul>
-                    {techConfig.map((item) => <TechnologyItem key={item.name} name={item.name} icon={item.icon}/>)}
-                </ul>
+                <div>
+                    <h2>
+                        Technologies
+                    </h2>
+                    <ul>
+                        {techConfig.map((item) => <TechnologyItem key={item.name} name={item.name} icon={item.icon}/>)}
+                    </ul>
+                </div>
             </div>
-        </Section>
     )
 };
 

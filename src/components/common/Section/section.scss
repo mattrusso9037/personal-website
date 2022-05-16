@@ -1,46 +1,63 @@
 @import '../../../common/variables.scss';
 
 .Section {
-  border-radius: $card_border_radius;
-  box-shadow: $box_shadow_1;
   border: 1px solid orange;
   color: white;
   padding: $baseUnit*8px $baseUnit*4px;
   border: $debug_border;
-  max-width: 850px;
-  margin: auto;
-  margin-top: #{$baseUnit*6}px;
-  margin-bottom: #{$baseUnit*6}px;
-  > .section_header {
-    display: grid;
-    grid-template-columns: fit-content(100%) fit-content(100%) 1fr;
-    border: $debug_border;
-    align-items: center;
-    grid-gap: $baseUnit*1px;
-    > h2 {
-      font-size: $baseUnit*4px;
-      margin: 0;
-    }
-    > hr {
-      width: calc(100% - #{$baseUnit*8px});
-      color: white;
-      background: white;
-      opacity: .4;
-    }
-  }
+  width: calc(100% - #{$baseUnit*8}px);
+  > .section_inner {
+    transition: all .5s ease-in-out;
+    max-width: $max_width;
+    margin: auto;
+    > .section_header {
+      display: grid;
+      grid-template-columns: fit-content(100%) fit-content(100%) 1fr;
+      border: $debug_border;
+      align-items: center;
+      grid-gap: $baseUnit*1px;
 
-  > .body {
-    border: $debug_border;
-    padding-top: $baseUnit*4px;
-    display: flex;
-    flex-wrap: wrap;
+      > h2 {
+        font-size: $baseUnit*4px;
+        margin: 0;
+      }
+
+      > hr {
+        width: calc(100% - #{$baseUnit*8px});
+        color: white;
+        background: white;
+        opacity: .4;
+      }
+    }
+
+    > .body {
+      border: $debug_border;
+      padding-top: $baseUnit*2px;
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 }
 
-@media screen and (max-width: 480px) {
-  .Section > .section_header > hr {
+@media screen and (max-width: 600px) {
+  .Section {
+    padding: $baseUnit*4px $mobileLeftPadding;
+    width: calc(100% - #{$mobileLeftPadding*2});
+  }
+  .Section > >.section_inner > .section_header > hr {
     width: 100%;
     justify-self: center;
     margin-left: 10px;
   }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Section {
+    transition: opacity 1.5s ease, transform 1.5s ease;
+  }
+}
+
+.square-transition {
+  opacity: 1;
+  transform: none;
 }

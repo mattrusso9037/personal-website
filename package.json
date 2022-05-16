@@ -1,6 +1,6 @@
 {
   "name": "matt-russo-site",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
@@ -19,6 +19,8 @@
     "react": "^16.0.2",
     "react-dom": "^16.0.2",
     "react-project-display": "./builds/react-project-display-0.0.16.tgz",
+    "react-router": "^6.3.0",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "4.0.3",
     "typescript": "^4.1.2",
     "web-vitals": "^1.0.1"

@@ -30,11 +30,11 @@ export const Contact: React.FC<IContactProps> = () => {
     }
 
     function onResumeClick(): void {
-        window.open('https://1drv.ms/b/s!Ap3vdSscpQxUguRJi9xPLlPEABP9PQ');
+        window.open('/assets/matt-russo-resume.pdf', 'blank');
     }
 
     return (
-        <Section title={'Contact Me'} icon={Icon.Communication}>
+        <Section className={'Contact Me'} title={''} icon={Icon.Communication}>
             <div className={'Contact'}>
                 <h2>
                     Let's Get In Touch

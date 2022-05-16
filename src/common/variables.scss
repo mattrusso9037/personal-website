@@ -11,16 +11,26 @@ $baseUnit: 8;
 $card_border_radius: 5px;
 
 $primaryColor: $fire_opal;
-$bgColor: $gray75;
+$secondaryColor: $gray75;
+$bgColor: white;
 $debug_border: none;
 $box_shadow_1: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 $box_shadow_light: 2px 3px 5px -1px #999999;
+$bodyLineHeight: 32px;
+
+$max_width: 850px;
+$navBarHeight: 50px;
+
+$mobileLeftPadding: $baseUnit*2px;
+$mobileTopPadding: $baseUnit*4px;
+
+$desktopBodyFontSize: 20px;
 
 :export {
+  $bg_color: $bgColor;
   $fire_opal: $fire_opal;
   $gray75: $gray75;
   $baseUnit: $baseUnit;
-
   $primaryColor: $fire_opal;
   $secondaryColor: $gray75;
   $debug_border: $debug_border;
