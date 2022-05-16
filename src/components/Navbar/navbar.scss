@@ -1,0 +1,22 @@
+@import '../../common/variables';
+
+.Navbar {
+  height: $navBarHeight;
+  position: fixed;
+  display: flex;
+  z-index: 3;
+  background: black;
+  justify-content: left;
+  align-items: center;
+  gap: #{$baseUnit*2}px;
+  opacity: .7;
+  width: 100%;
+  padding-left: #{$baseUnit}px;
+  > li {
+    list-style-type: none;
+    > a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
