@@ -5,12 +5,11 @@
   color: white;
   padding: $baseUnit*8px $baseUnit*4px;
   border: $debug_border;
+  width: calc(100% - #{$baseUnit*8}px);
   > .section_inner {
     transition: all .5s ease-in-out;
     max-width: $max_width;
     margin: auto;
-    margin-top: #{$baseUnit*6}px;
-    margin-bottom: #{$baseUnit*6}px;
     > .section_header {
       display: grid;
       grid-template-columns: fit-content(100%) fit-content(100%) 1fr;
@@ -33,14 +32,18 @@
 
     > .body {
       border: $debug_border;
-      padding-top: $baseUnit*4px;
+      padding-top: $baseUnit*2px;
       display: flex;
       flex-wrap: wrap;
     }
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
+  .Section {
+    padding: $baseUnit*4px $mobileLeftPadding;
+    width: calc(100% - #{$mobileLeftPadding*2});
+  }
   .Section > >.section_inner > .section_header > hr {
     width: 100%;
     justify-self: center;

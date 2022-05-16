@@ -25,7 +25,9 @@ export const Header: FC<IHeaderProps> =
                     <div>
                         <h1>Hi I'm <span>Matt Russo</span>.<br/>I'm a Software Engineer.</h1>
                     </div>
+                <div>
                     <FontAwesomeIcon className={'fa-thin'} onClick={onClick} icon={faChevronDown} color={'white'} size={'3x'} />
+                </div>
                 </div>
             </div>
         )

@@ -15,15 +15,6 @@ export const mockProjects: IProject[] = [
         view: <Aurora />
     },
     {
-        title: 'Simpli Budget',
-        description: 'A Budgeting Mobile App',
-        fullDescription: 'Simpli Budget is a cross platform mobile application used for tracking users spending. I couldn\'t find a minimalist ' +
-            'budgeting app that existed and I wanted to learn a new technology, so I built Simpli Budget. I handled all aspects of development and deployment. I designed and implemented various user screens, a budgeting mechanism, user authentication, and the database.',
-        technologiesUsed: ['Flutter', 'Google Cloud', 'Cloud Functions', 'FireStore', 'Firebase Auth', 'GitHub Actions'],
-        featuredImageUri: 'simpli_budget_featured.png',
-        thumbnailImageUri: 'budget_thumb.jpg',
-    },
-    {
         title: 'EyeTemp',
         description: 'A Cross-Platform Mobile App',
         fullDescription: 'EyeTemp is an IoT device that can be placed on an appliance and ' +
@@ -45,6 +36,15 @@ export const mockProjects: IProject[] = [
         featuredImageUri: 'conquer_money_featured.jpg',
         thumbnailImageUri: 'conquer_money_thumb.jpg',
         resourceUrl: 'https://www.conquer.money/',
+    },
+    {
+        title: 'Simpli Budget',
+        description: 'A Budgeting Mobile App',
+        fullDescription: 'Simpli Budget is a cross platform mobile application used for tracking users spending. I couldn\'t find a minimalist ' +
+            'budgeting app that existed and I wanted to learn a new technology, so I built Simpli Budget. I handled all aspects of development and deployment. I designed and implemented various user screens, a budgeting mechanism, user authentication, and the database.',
+        technologiesUsed: ['Flutter', 'Google Cloud', 'Cloud Functions', 'FireStore', 'Firebase Auth', 'GitHub Actions'],
+        featuredImageUri: 'simpli_budget_featured.png',
+        thumbnailImageUri: 'budget_thumb.jpg',
     },
     {
         title: 'Age By Planet',

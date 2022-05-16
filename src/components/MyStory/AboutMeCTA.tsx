@@ -37,7 +37,7 @@ export const AboutMeCTA: React.FC<IAboutMeCTAProps> = ({ aboutRef }) => {
             <div className={'MyStory'}>
                 <div className={'card-container'}>
                     I'm currently a Software Lead at Intelligent Product Solutions. I've been working as part of an
-                    R&D-turned product team at Zebra Technologies for the last three years,
+                    R&D-turned-product team at Zebra Technologies for the last three years,
                     architecting and implementing feature areas in the machine vision space.
                 </div>
                 <Button type={'secondary'} text={'See More'} onClick={() => navigate('/about')} />

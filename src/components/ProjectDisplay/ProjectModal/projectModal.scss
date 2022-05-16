@@ -57,10 +57,25 @@ $transformation: all 2s ease;
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
+      gap: #{$baseUnit}px;
       align-items: center;
+      padding-bottom: #{$baseUnit*4}px;
+      padding-right:  #{$baseUnit*4}px;
       > svg:hover {
         cursor: pointer;
         opacity: .8;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ProjectModalBody {
+    .content {
+      width: calc(100% - #{$baseUnit*2}px);
+      padding: #{$baseUnit}px;
+      > img {
+        width: 300px;
       }
     }
   }

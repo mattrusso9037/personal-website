@@ -1,52 +1,64 @@
 @import '../../common/variables';
 
-.Section.About > .section_inner > .body > .technology_container {
+.technology_container {
   width: 100%;
-  display: block;
-  gap: #{$baseUnit}px;
-
-  > h2 {
-    font-weight: normal;
-  }
-
-  > hr {
-    background: $fire_opal;
-    border: 1px solid $fire_opal;
-    width: calc(100% - #{$baseUnit*25}px);
-    opacity: .8;
-  }
-
-  .TechItem {
-    justify-content: start;
-  }
-
-  > h2 {
-    margin: 0;
-    padding-top: $baseUnit*4px;
-  }
-
-  > ul {
-    padding-top: $baseUnit*8px;
-    list-style: none;
+  display: flex;
+  background: $floral_white;
+  align-items: center;
+  justify-content: center;
+  padding: $baseUnit*8px 0;
+  > div {
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    gap: $baseUnit*2px;
-    padding-left: 0;
-    margin: 0;
+    max-width: $max_width;
+    flex-direction: column;
 
-    li {
-      border-radius: 45px;
-      padding: $baseUnit*1px $baseUnit*2px;
-      border: $debug_border;
+    > hr {
+      background: $fire_opal;
+      border: 1px solid $fire_opal;
+      width: calc(100% - #{$baseUnit*25}px);
+      opacity: .8;
+    }
+
+    .TechItem {
+      justify-content: start;
+    }
+
+    > h2 {
+      margin: 0;
+      text-transform: uppercase;
+      font-size: 22px;
+    }
+
+    > ul {
+      padding-top: $baseUnit*4px;
+      list-style: none;
       display: flex;
-      align-items: center;
-      gap: $baseUnit*1px;
-      font-size: 18px;
+      flex-wrap: wrap;
+      gap: $baseUnit*2px;
+      padding-left: 0;
+      margin: 0;
 
-      img {
-        width: 40px;
+      li {
+        border-radius: 45px;
+        padding: $baseUnit*1px $baseUnit*2px;
+        border: $debug_border;
+        display: flex;
+        align-items: center;
+        gap: $baseUnit*1px;
+        font-size: 18px;
+
+        img {
+          width: 40px;
+        }
       }
     }
   }
 }
 
+@media screen and (max-width: 600px) {
+  .technology_container {
+    width: calc(100% - #{$mobileLeftPadding*2});
+    padding: $mobileTopPadding $mobileLeftPadding;
+  }
+}

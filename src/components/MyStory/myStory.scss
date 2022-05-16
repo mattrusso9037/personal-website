@@ -7,13 +7,15 @@ $transformation: all .5s ease;
   > .section_inner {
     margin-top: 0;
     margin-bottom: 0;
+    .body {
+      padding-top: 0;
+    }
   }
   .MyStory {
     display: flex;
     flex-direction: column;
     font-size: 24px;
     width: 100%;
-    margin-top: #{$baseUnit*8}px !important;
     gap: #{$baseUnit*8}px !important;
     text-align: left;
     > .Button {
@@ -22,6 +24,7 @@ $transformation: all .5s ease;
 
     > .card-container {
       display: flex;
+      line-height: #{$baseUnit*4}px;
     }
 
     > .action-container {
@@ -34,14 +37,19 @@ $transformation: all .5s ease;
 }
 
 @media screen and (max-width: 1324px) {
-  .MyStory {
-    > .card-container {
-      flex-direction: column;
-      width: 100%;
-    }
+  .AboutMeCta {
+    padding-top: #{$baseUnit*6}px;
+    padding-bottom: #{$baseUnit*6}px;
+    .MyStory {
+      margin-top: #{$baseUnit}px;
+      > .card-container {
+        flex-direction: column;
+        width: 100%;
+      }
 
-    > .action-container {
-      display: none;
+      > .action-container {
+        display: none;
+      }
     }
   }
 }
