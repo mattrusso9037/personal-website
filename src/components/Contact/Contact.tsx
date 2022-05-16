@@ -30,7 +30,7 @@ export const Contact: React.FC<IContactProps> = () => {
     }
 
     function onResumeClick(): void {
-        window.open('https://1drv.ms/b/s!Ap3vdSscpQxUguRJi9xPLlPEABP9PQ');
+        window.open('/assets/matt-russo-resume.pdf', 'blank');
     }
 
     return (

@@ -1,11 +1,9 @@
 import * as React from 'react';
 import './projectModal.scss';
 import {IProject} from "../IProject";
-import {ProjectModalItem} from "./ProjectModalItem";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faExternalLink} from "@fortawesome/free-solid-svg-icons";
 import {faGithubSquare} from '@fortawesome/free-brands-svg-icons';
-import {Section} from "../../common/Section/Section";
 
 interface IProjectModalBodyProps {
     project: IProject;
@@ -36,23 +34,23 @@ export const ProjectModalBody: React.FC<IProjectModalBodyProps> = ({project}) =>
                     </div>
                     <img alt={'zebra'} src={`assets/projects/${project.featuredImageUri}`} />
                     {project.view}
-                    {/*<div className={'action-container'}>*/}
-                    {/*    {project.sourceControlUrl && (*/}
-                    {/*        <FontAwesomeIcon*/}
-                    {/*            color={'#F25F5C'}*/}
-                    {/*            size={'2x'}*/}
-                    {/*            icon={faGithubSquare}*/}
-                    {/*            onClick={() => openLink(project.sourceControlUrl*/}
-                    {/*            )}*/}
-                    {/*        />)}*/}
-                    {/*    {project.resourceUrl && (*/}
-                    {/*        <FontAwesomeIcon*/}
-                    {/*            color={'#F25F5C'}*/}
-                    {/*            size={'2x'}*/}
-                    {/*            icon={faExternalLink}*/}
-                    {/*            onClick={() => openLink(project.resourceUrl)}*/}
-                    {/*        />)}*/}
-                    {/*</div>*/}
+                    <div className={'action-container'}>
+                        {project.sourceControlUrl && (
+                            <FontAwesomeIcon
+                                color={'#F25F5C'}
+                                size={'2x'}
+                                icon={faGithubSquare}
+                                onClick={() => openLink(project.sourceControlUrl
+                                )}
+                            />)}
+                        {project.resourceUrl && (
+                            <FontAwesomeIcon
+                                color={'#F25F5C'}
+                                size={'2x'}
+                                icon={faExternalLink}
+                                onClick={() => openLink(project.resourceUrl)}
+                            />)}
+                    </div>
                 </div>
             </div>
         </div>
