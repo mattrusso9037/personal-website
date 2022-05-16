@@ -8,19 +8,6 @@
   perspective: 1px;
   perspective-origin: center top;
   transform-style: preserve-3d;
-
-  &.modal-open {
-    overflow: visible;
-    background: $gray75;
-    > .main_content {
-      overflow: hidden;
-      height: auto !important;
-    }
-    body {
-      overflow: hidden;
-      height: auto !important;
-    }
-  }
   .main_content {
     background: white;
     perspective: 4px;
