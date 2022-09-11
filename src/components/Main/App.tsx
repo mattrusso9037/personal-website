@@ -1,20 +1,22 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.scss';
-import {Header} from '../Header/Header';
-import {Sections} from './SectionTypes';
-import {useScroll} from '../../hooks/useScroll';
-import {ProjectDisplay} from '../ProjectDisplay/ProjectDisplay';
-import {mockProjects} from '../ProjectDisplay/mockProjects';
-import {Contact} from '../Contact/Contact';
-import {AboutMeCTA} from '../MyStory/AboutMeCTA';
-import {CompanyDisplay} from '../CompanyDisplay/CompanyDisplay';
-import {ProjectModalBody} from '../ProjectDisplay/ProjectModal/ProjectModalBody';
-import {Modal} from '../common/Modal/Modal';
+import { Header } from '../Header/Header';
+import { Sections } from './SectionTypes';
+import { useScroll } from '../../hooks/useScroll';
+import { ProjectDisplay } from '../ProjectDisplay/ProjectDisplay';
+import { mockProjects } from '../ProjectDisplay/mockProjects';
+import { Contact } from '../Contact/Contact';
+import { AboutMeCTA } from '../MyStory/AboutMeCTA';
+import { CompanyDisplay } from '../CompanyDisplay/CompanyDisplay';
+import { ProjectModalBody } from '../ProjectDisplay/ProjectModal/ProjectModalBody';
+import { Modal } from '../common/Modal/Modal';
+import { Login } from '../Login/Login';
 
 function App() {
-    const {getRef, scrollToElement} = useScroll({});
+    const { getRef, scrollToElement } = useScroll({});
     const [showModal, setShowModal] = useState<boolean>(false);
     const [projectIndex, setProjectIndex] = useState<number>(0);
+    const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
 
     function onProjectSelected(index: number): void {
         setProjectIndex(index);
@@ -50,23 +52,26 @@ function App() {
         <div onScroll={onScroll}>
             <div className={`App`}>
                 <>
-                    <Header onAboutClick={scrollToElement}/>
+                    <Header onAboutClick={scrollToElement} />
                     <div className={'main_content'}>
-                        <AboutMeCTA aboutRef={getRef(Sections.About)}/>
-                        <CompanyDisplay/>
-                        <ProjectDisplay
-                            onProjectSelected={onProjectSelected}
-                            projects={mockProjects}
-                            showModal={showModal}
-                            setShowModal={setShowModal}
-                        />
-                        <Contact/>
+                        <AboutMeCTA aboutRef={getRef(Sections.About)} />
+                        
+                        {isAuthenticated ? <>
+                            <CompanyDisplay />
+                            <ProjectDisplay
+                                onProjectSelected={onProjectSelected}
+                                projects={mockProjects}
+                                showModal={showModal}
+                                setShowModal={setShowModal}
+                            />
+                        </> : <Login setIsAuthenticated={setIsAuthenticated} />}
+                        <Contact />
 
                     </div>
                 </>
             </div>
             <Modal show={showModal} onClose={() => setShowModal(false)}>
-                <ProjectModalBody project={mockProjects[projectIndex]}/>
+                <ProjectModalBody project={mockProjects[projectIndex]} />
             </Modal>
         </div>
     );
