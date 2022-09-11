@@ -11,13 +11,13 @@ export class API {
                     password: password.trim(),
                 }),
             });
-    
-            return await res.json();
+            const { body } = await res.json();
+            
+            return body;
         } catch (e) {
             console.error(e);
             return false;
         }
-    
     };
-    
+
 }
