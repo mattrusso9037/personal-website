@@ -1,9 +1,6 @@
 import {MutableRefObject, useRef} from 'react';
 import {Sections} from '../components/Main/SectionTypes';
 
-interface IUseScrollParams {
-}
-
 interface IUseScroll {
     scrollToElement: ScrollTo;
     getRef: GetRef;
@@ -13,7 +10,7 @@ export type ScrollTo = (containerId: number) => void;
 type RefMap = { [key: number]: MutableRefObject<HTMLDivElement | null> };
 type GetRef = (id: number) => MutableRefObject<HTMLDivElement | null>;
 
-export const useScroll = ({}: IUseScrollParams): IUseScroll => {
+export const useScroll = (): IUseScroll => {
     const aboutRef = useRef<HTMLDivElement>(null);
 
     const refMap: RefMap = {

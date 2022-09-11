@@ -4,11 +4,8 @@ import {ProjectCard} from './ProjectCard/ProjectCard';
 import {IProject} from './IProject';
 import {ISize} from './ISize';
 import './projectDisplay.scss';
-import {useState} from "react";
 import {Section} from "../common/Section/Section";
 import {Icon} from "../common/Icon";
-import {Modal} from "../common/Modal/Modal";
-import {ProjectModalBody} from "./ProjectModal/ProjectModalBody";
 
 const DEFAULT_THEME: ITheme = {
     primary: 'black',
