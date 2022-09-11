@@ -36,9 +36,7 @@ export const AboutMeCTA: React.FC<IAboutMeCTAProps> = ({ aboutRef }) => {
         <Section locationRef={aboutRef} className={'AboutMeCta'} title={''}>
             <div className={'MyStory'}>
                 <div className={'card-container'}>
-                    I'm currently a Software Lead at Intelligent Product Solutions. I've been working as part of an
-                    R&D-turned-product team at Zebra Technologies for the last three years,
-                    architecting and implementing feature areas in the machine vision space.
+                    I'm currently working as a Software Engineer at Capital One. I'm utilizing Angular, Lit, Node.js and AWS to deliver meaningful web experiences to end users.
                 </div>
                 <Button type={'secondary'} text={'See More'} onClick={() => navigate('/about')} />
             </div>
