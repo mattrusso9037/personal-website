@@ -4,7 +4,7 @@ import { MutatingDots } from 'react-loader-spinner';
 interface IProps {
 
 }
-export const Loader: FC<IProps> = ({ }) => {
+export const Loader: FC<IProps> = () => {
     return (
         <MutatingDots
             height="100"

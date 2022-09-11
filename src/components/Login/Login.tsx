@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useState } from 'react';
 import './Login.scss';
 import { Section } from '../common/Section/Section';
 import { Button } from '../common/Button/Button';
