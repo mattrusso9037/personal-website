@@ -13,7 +13,7 @@ import { Modal } from '../common/Modal/Modal';
 import { Login } from '../Login/Login';
 
 function App() {
-    const { getRef, scrollToElement } = useScroll({});
+    const { getRef, scrollToElement } = useScroll();
     const [showModal, setShowModal] = useState<boolean>(false);
     const [projectIndex, setProjectIndex] = useState<number>(0);
     const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
