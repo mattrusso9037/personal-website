@@ -15,7 +15,7 @@ export const Aurora: React.FC = () => {
                     <label>Golden Image Compare</label>
                     <div>Golden image compare utilizes synchronized HTML5 canvases to allow users to view images side by side. Users are able to pan
                     and zoom images in tandem. It allows users to compare their current subject image to a model image and inspect the differences, so they can adjust their camera settings appropriately.</div>
-                    <img alt='Image Comparison' src={'./assets/projects/golden_image_compare_2.png'} />
+                    <img alt='Subject Comparison' src={'./assets/projects/golden_image_compare_2.png'} />
                     <a target={'_blank'} rel='noreferrer' href={'https://www.youtube.com/watch?v=n-d0GhVa43I'}>View Video</a>
                 </div>
                 <div className={'container'}>
