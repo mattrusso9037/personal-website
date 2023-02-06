@@ -16,7 +16,7 @@ function App() {
     const { getRef, scrollToElement } = useScroll();
     const [showModal, setShowModal] = useState<boolean>(false);
     const [projectIndex, setProjectIndex] = useState<number>(0);
-    const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
+    const [isAuthenticated, setIsAuthenticated] = useState<boolean>(true);
 
     function onProjectSelected(index: number): void {
         setProjectIndex(index);

@@ -1,5 +1,5 @@
 @import '../../common/variables';
-$transition: all .3s ease-in;
+$transition: all $transitionTime ease-in;
 .Navbar {
   > .link_container {
     height: $navBarHeight;

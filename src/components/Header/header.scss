@@ -47,7 +47,7 @@ $scroll-factor: .5;
       align-items: end;
       > svg {
         margin-bottom: #{$baseUnit}px;
-        transition: margin-bottom .2s ease-in-out;
+        transition: margin-bottom $transitionTime ease-in-out;
         cursor: pointer;
         &:hover {
           margin-bottom: #{$baseUnit*2}px;

@@ -7,7 +7,7 @@
   border: $debug_border;
   width: calc(100% - #{$baseUnit*8}px);
   > .section_inner {
-    transition: all .5s ease-in-out;
+    transition: all $transitionTime ease-in-out;
     max-width: $max_width;
     margin: auto;
     > .section_header {

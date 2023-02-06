@@ -22,10 +22,10 @@
 
   &:hover {
     background: $primaryColor;
-    -webkit-transition: background-color .3s ease;
-    -moz-transition: background-color .3s ease;
-    -o-transition: background-color .3s ease;
-    transition: background-color .3s ease;
+    -webkit-transition: background-color $transitionTime ease;
+    -moz-transition: background-color $transitionTime ease;
+    -o-transition: background-color $transitionTime ease;
+    transition: background-color $transitionTime ease;
     border: 2px solid $primaryColor;
   }
 }
@@ -34,10 +34,10 @@
   border: 2px solid $primaryColor;
   color: white;
   background: $primaryColor;
-  -webkit-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all $transitionTime ease;
+  -moz-transition: all $transitionTime ease;
+  -o-transition: all $transitionTime ease;
+  transition: all $transitionTime ease;
   &:hover {
     box-shadow: $box_shadow_1;
   }

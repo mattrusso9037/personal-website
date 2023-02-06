@@ -25,6 +25,14 @@ $transformation: all .5s ease;
     > .card-container {
       display: flex;
       line-height: #{$baseUnit*4}px;
+      a {
+        text-decoration: none;
+        color: $fire_opal;
+        &:hover {
+          text-decoration: underline;
+          transition: all $transitionTime ease;
+        }
+      }
     }
 
     > .action-container {
