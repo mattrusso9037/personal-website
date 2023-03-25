@@ -33,12 +33,16 @@ $scroll-factor: .5;
     > div {
       > h1 {
         text-align: left;
+        background: rgba(0,0,0,.3);
+        background: rgb;
+        padding: 16px;
+        border-radius: 24px;      
         color: white;
       }
     }
 
     span {
-      color: $primaryColor;
+      color: mediumpurple;
     }
 
     > div {
