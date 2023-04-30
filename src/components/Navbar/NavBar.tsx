@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 
 export const NavBar: React.FC = () => {
     return (
-        <div className={'Navbar'}>
+        <nav className={'Navbar'}>
             <div className={'nav_underlay'}></div>
             <div className={'link_container'}>
                 <li>
@@ -14,6 +14,6 @@ export const NavBar: React.FC = () => {
                     <Link to="/About">About</Link>
                 </li>
             </div>
-        </div>
+        </nav>
     )
 };

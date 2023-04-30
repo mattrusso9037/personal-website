@@ -5,8 +5,8 @@ $transformation: all .5s ease;
   background: white;
   color: $secondaryColor;
   > .section_inner {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
+    max-width: 3000px;
     .body {
       padding-top: 0;
     }
@@ -18,16 +18,36 @@ $transformation: all .5s ease;
     width: 100%;
     gap: #{$baseUnit*8}px !important;
     text-align: left;
+    width: 650px;
+    margin-left: 25%;
+    margin-top: 5%;
+    color: $secondaryColor;
+   .underlay {
+      width: 90%;
+      height: 150%;
+      position: absolute;
+      background: $primaryColor;
+      border-radius: 130% 0px 0px 50%;
+      top: 0;
+      right: 0;
+    }
+    img {
+      z-index: 4;
+      width: 300px;
+      border-radius: 24px;
+    }
     > .Button {
       align-self: end;
+      z-index: 4;
     }
 
     > .card-container {
       display: flex;
       line-height: #{$baseUnit*4}px;
+      z-index: 3;
       a {
         text-decoration: none;
-        color: $fire_opal;
+        color: $accentColor;
         &:hover {
           text-decoration: underline;
           transition: all $transitionTime ease;

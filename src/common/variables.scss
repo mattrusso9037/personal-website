@@ -10,8 +10,20 @@ $morning_blue: #86a59c;
 $baseUnit: 8;
 $card_border_radius: 5px;
 
-$primaryColor: $fire_opal;
-$secondaryColor: $gray75;
+
+// Purple Pallette
+$deep_purple: #46174f;
+$apricot: #fbcbaa;
+$bright_blue: #34c9ca;
+$light_purple: #6e236e;
+$bright_pink: #eb4f7d;
+$cool_gray: #9FA4C4;
+$caribbean_blue: #0D5C63;
+
+$primaryColor: $deep_purple;
+$secondaryColor: $caribbean_blue;
+$accentColor: $bright_pink;
+
 $bgColor: white;
 $debug_border: none;
 $box_shadow_1: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -28,13 +40,17 @@ $desktopBodyFontSize: 20px;
 
 $transitionTime: .3s;
 
+
+
+
 :export {
   $bg_color: $bgColor;
   $fire_opal: $fire_opal;
   $gray75: $gray75;
   $baseUnit: $baseUnit;
-  $primaryColor: $fire_opal;
-  $secondaryColor: $gray75;
+  $primaryColor: $deep_purple;
+  $secondaryColor: $bright_blue;
+  $tertiary: $bright_pink;
   $debug_border: $debug_border;
 
   $box_shadow_1: $box_shadow_1;

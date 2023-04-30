@@ -13,6 +13,7 @@ $transition: all $transitionTime ease-in;
     padding-left: #{$baseUnit*2}px;
     background: transparent;
     transition: $transition;
+    font-weight: 600;
     > li {
       list-style-type: none;
 
@@ -25,7 +26,7 @@ $transition: all $transitionTime ease-in;
         color: white;
         border-bottom: 0 solid white;
         &:hover {
-          border-bottom: 1px solid white;
+          opacity: .8;
         }
       }
     }
@@ -35,7 +36,7 @@ $transition: all $transitionTime ease-in;
     position: fixed;
     width: 100%;
     height: $navBarHeight;
-    background: black;
+    background: $secondaryColor;
     left: 0;
     z-index: 1;
     transition: $transition;
@@ -45,7 +46,6 @@ $transition: all $transitionTime ease-in;
   &.show {
     .nav_underlay {
       transform: translateY(0);
-      opacity: .8;
     }
   }
 

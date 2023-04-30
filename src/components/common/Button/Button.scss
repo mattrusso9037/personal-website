@@ -31,9 +31,9 @@
 }
 
 .secondary {
-  border: 2px solid $primaryColor;
+  border: 2px solid $secondaryColor;
   color: white;
-  background: $primaryColor;
+  background: $secondaryColor;
   -webkit-transition: all $transitionTime ease;
   -moz-transition: all $transitionTime ease;
   -o-transition: all $transitionTime ease;

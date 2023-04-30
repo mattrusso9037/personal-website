@@ -44,7 +44,7 @@
     padding: $baseUnit*4px $mobileLeftPadding;
     width: calc(100% - #{$mobileLeftPadding*2});
   }
-  .Section > >.section_inner > .section_header > hr {
+  .Section >.section_inner > .section_header > hr {
     width: 100%;
     justify-self: center;
     margin-left: 10px;
