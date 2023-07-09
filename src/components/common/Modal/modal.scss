@@ -8,7 +8,7 @@ $initialModalPosition: 100%;
   top: 0;
 
   .card {
-    transform: translateY(125%);
+    transform: translateY(100vh);
     overflow: scroll;
     background: $floral_white;
     z-index: 3;
