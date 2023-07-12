@@ -14,10 +14,6 @@ export const Header: FC<IHeaderProps> =
         onAboutClick,
     }) => {
 
-        function onClick(): void {
-            onAboutClick(Sections.About);
-        }
-
         return (
             <header className={'Header'}>
                 <img alt={'A colorful image of a laptop surrounded by planets, AI generated.'} src={'/assets/hero_2.png'} />
@@ -26,7 +22,9 @@ export const Header: FC<IHeaderProps> =
                         <h1>Hi I'm <span>Matt Russo</span>.<br />I'm a Software Engineer.</h1>
                     </div>
                     <div>
-                        <FontAwesomeIcon className={'fa-thin'} onClick={onClick} icon={faChevronDown} color={'white'} size={'3x'} />
+                        <a href='#about'>
+                        <FontAwesomeIcon className={'fa-thin'} icon={faChevronDown} color={'white'} size={'3x'} />
+                        </a>
                     </div>
                 </div>
             </header>

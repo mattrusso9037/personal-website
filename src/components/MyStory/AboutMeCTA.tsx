@@ -3,17 +3,15 @@ import './myStory.scss';
 import {Button} from '../common/Button/Button';
 import {Section} from "../common/Section/Section";
 import {MutableRefObject} from "react";
-import { useNavigate } from "react-router-dom";
 
 interface IAboutMeCTAProps {
     aboutRef: MutableRefObject<null | HTMLDivElement>;
 }
 
 export const AboutMeCTA: React.FC<IAboutMeCTAProps> = ({ aboutRef }) => {
-    const navigate = useNavigate();
 
     return (
-        <Section locationRef={aboutRef} className={'AboutMeCta'} title={''}>
+        <Section id='about' locationRef={aboutRef} className={'AboutMeCta'} title={''}>
             <div className={'MyStory'}>
             <div className='underlay'></div>
 
@@ -23,7 +21,6 @@ export const AboutMeCTA: React.FC<IAboutMeCTAProps> = ({ aboutRef }) => {
                     </div>
                 </div>
                 <img src='/assets/matt.jpg' />
-                <Button type={'secondary'} text={'See More'} onClick={() => navigate('/about')} />
             </div>
         </Section>
     )

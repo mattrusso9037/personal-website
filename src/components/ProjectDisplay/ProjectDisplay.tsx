@@ -41,7 +41,7 @@ export const ProjectDisplay: React.FC<IProjectDisplayProps> =
 
         return (
             <Section className={'Projects'} title={''} icon={Icon.Implementation}>
-                <div className={'ProjectDisplay'}>
+                <div id="projects" className={'ProjectDisplay'}>
                     <div className={'project_container'}>
                         {projects.map((project, index) => {
                             return <ProjectCard key={project.title} project={project} onProjectSelected={() => onProjectSelected(index)}/>

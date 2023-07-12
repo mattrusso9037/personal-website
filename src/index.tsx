@@ -11,14 +11,7 @@ import {
 import {About} from "./components/About/About";
 import {NavBar} from "./components/Navbar/NavBar";
 
-ReactDOM.render(
-    <BrowserRouter>
-        <NavBar />
-        <Routes>
-            <Route path='/' element={<App />} />
-            <Route path='about' element={<About />} />
-        </Routes>
-    </BrowserRouter>,
+ReactDOM.render(<App />,
   document.getElementById('root')
 );
 

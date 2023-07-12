@@ -6,6 +6,8 @@
   padding: $baseUnit*8px $baseUnit*4px;
   border: $debug_border;
   width: calc(100% - #{$baseUnit*8}px);
+  position: relative;
+  background: $floral_white;
   > .section_inner {
     transition: all $transitionTime ease-in-out;
     max-width: $max_width;

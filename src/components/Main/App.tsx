@@ -7,10 +7,10 @@ import { ProjectDisplay } from '../ProjectDisplay/ProjectDisplay';
 import { mockProjects } from '../ProjectDisplay/mockProjects';
 import { Contact } from '../Contact/Contact';
 import { AboutMeCTA } from '../MyStory/AboutMeCTA';
-import { CompanyDisplay } from '../CompanyDisplay/CompanyDisplay';
 import { ProjectModalBody } from '../ProjectDisplay/ProjectModal/ProjectModalBody';
 import { Modal } from '../common/Modal/Modal';
 import { Login } from '../Login/Login';
+import { About } from '../About/About';
 
 function App() {
     const { getRef, scrollToElement } = useScroll();
@@ -23,41 +23,15 @@ function App() {
         setShowModal(true);
     }
 
-    function onScroll() {
-        const aboutMeRef = getRef(Sections.About);
-        const navBarPositionTop = aboutMeRef?.current?.getBoundingClientRect()?.top;
-        const navIsBelowAboutSection = navBarPositionTop ? navBarPositionTop - 50 < 0 : true;
-        const navBar = document.getElementsByClassName('Navbar')[0];
-
-        if (navIsBelowAboutSection) {
-            navBar.classList.add('show');
-        } else {
-            navBar.classList.remove('show');
-        }
-    }
-
-    useEffect(() => {
-        const navBar = document.getElementsByClassName('Navbar')[0];
-        console.log(navBar)
-        if (showModal) {
-            setTimeout(() => {
-                navBar?.classList.add('hide');
-            }, 700);
-        } else {
-            navBar?.classList.remove('hide');
-        }
-    }, [showModal]);
-
     return (
-        <div onScroll={onScroll}>
+        <div>
             <div className={`App`}>
                 <>
                     <Header onAboutClick={scrollToElement} />
                     <div className={'main_content'}>
                         <AboutMeCTA aboutRef={getRef(Sections.About)} />
-                        
                         {isAuthenticated ? <>
-                            <CompanyDisplay />
+                            <About />
                             <ProjectDisplay
                                 onProjectSelected={onProjectSelected}
                                 projects={mockProjects}

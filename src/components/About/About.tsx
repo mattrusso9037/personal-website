@@ -19,21 +19,37 @@ export const About: FC = () => {
                 <div>
                     <div className={'description_container'}>
                         <div>
-                            I'm a software engineer with a strong passion for learning and problem solving. I firmly believe coding is an art form, and I take pride in things
-                            like optimization, readability, scalability, extendibility and modularity.
+                        Welcome to my site! I'm Matt Russo, a results-driven Full Stack Software Engineer with a strong 
+                        background in consulting. I have a solid foundation in both front-end and back-end development, 
+                        and I'm dedicated to crafting innovative software solutions. Throughout my career, I've had the 
+                        privilege of working on diverse projects and collaborating with various clients, bringing a unique 
+                        perspective to every endeavor. I've worked in a variety of industries, including healthcare, machine vision, security system services,
+                        and automotive.
                             <br/><br/>
-                            I started my career building mobile apps for the Android platform in college. When I
-                            joined the industry, I began using technologies like React, React Native and Electron to build
-                            cross-platform mobile and desktop applications using web technologies. Since then, I've been
-                            focusing on improving my skills, learning all I can about the industry, and mentoring others. I
-                            enjoy working across all stacks of development, but I prefer working on the front-end delivering
-                            meaningful experiences to end users.
+                            As a junior engineer, I kicked off my journey at a local engineering firm, where I honed my skills 
+                            by working on a mobile app using React Native and an internal web application utilizing React, 
+                            Node.js, and MongoDB. I even dove into exciting integration projects involving embedded devices. 
+                            During this time, I gained invaluable experience in delivering high-impact features as part of 
+                            cross-functional teams.
                             <br/><br/>
-                            In my free time I enjoy working on side projects, playing video games, watching movies,
-                            exploring nature, and spending time with my wife and daughter.
+                            My consulting adventures continued as I joined forces with Zebra Technologies, where I played a 
+                            crucial role in developing a cutting-edge <a href='#projects'>machine vision desktop application</a>. By building a 
+                            high-fidelity prototype, our team spearheaded accelerated prioritization, ultimately leading 
+                            to a successful product launch three years later. As part of a cross-functional team, 
+                            I took ownership of multiple impactful features, leaving my mark on the project in several major areas of
+                            the application.
+                            <br/><br/>
+                            Currently, I'm channeling my expertise into the AutoNavigator product at Capital One, working 
+                            closely with teammates, product managers, engineering managers, and application architects. 
+                            I design, scope, estimate, and implement features that enhance the user experience. In addition, 
+                            I've gained proficiency in industry-standard logging and monitoring tools like Splunk and New Relic. 
+                            I'm well-versed in different architectural paradigms, thriving in both monorepo and 
+                            microservice environments. Throughout my journey, I've embraced agile methodologies and stayed on 
+                            top of the latest industry trends.
+                            <br/><br/>
+                            I'm always up for a chat with fellow professionals in the industry, <a href='#contact'>let's connect</a>!
                         </div>
                     </div>
-                    {/*<img alt={'me'} src={'/assets/me.jpg'}/>*/}
                 </div>
             </Section>
             <TechnologyDisplay/>

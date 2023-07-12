@@ -1,15 +1,18 @@
 @import '../../common/variables';
 
-.Section.Contact {
-  background: $floral_white;
-  position: relative;
-}
 .section_inner {
   justify-content: center;
   > .body {
     justify-content: center;
 
   }
+}
+
+.Section.Contact > .section_inner {
+    padding-top: 0;
+    > .body {
+      padding-top: 0;
+    }
 }
 .Contact {
   color: $primaryColor;
@@ -28,7 +31,6 @@
 
         svg {
           cursor: pointer;
-
           &:hover {
             opacity: .8;
           }

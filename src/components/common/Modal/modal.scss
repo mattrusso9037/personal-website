@@ -45,6 +45,9 @@ $initialModalPosition: 100%;
       align-items: center;
       z-index: 3;
       padding: 4px;
+      svg {
+        fill: $secondaryColor;
+      }
     }
   }
 }

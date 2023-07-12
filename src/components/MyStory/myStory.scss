@@ -21,7 +21,7 @@ $transformation: all .5s ease;
     width: 650px;
     margin-left: 25%;
     margin-top: 5%;
-    color: $secondaryColor;
+    color: white;
    .underlay {
       width: 90%;
       height: 150%;
@@ -70,6 +70,11 @@ $transformation: all .5s ease;
     padding-bottom: #{$baseUnit*6}px;
     .MyStory {
       margin-top: #{$baseUnit}px;
+      margin-left: 0px;
+      .underlay {
+        width: 100%;
+        border-radius: 0;
+      }
       > .card-container {
         flex-direction: column;
         width: 100%;

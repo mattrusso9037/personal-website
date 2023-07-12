@@ -1,7 +1,14 @@
 @import '../../common/variables';
 
 .Section.About {
-  color: $secondaryColor;
+  color: $gray75;
+  a {
+    color: $accentColor;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
   > .section_inner {
     > .body {
       display: flex;

@@ -61,9 +61,13 @@ $transformation: all 2s ease;
       align-items: center;
       padding-bottom: #{$baseUnit*4}px;
       padding-right:  #{$baseUnit*4}px;
-      > svg:hover {
-        cursor: pointer;
-        opacity: .8;
+      > svg {
+        color: $primaryColor;
+        &:hover {
+          cursor: pointer;
+          opacity: .8;
+        }
+        
       }
     }
   }
