@@ -23,7 +23,7 @@ export const Header: FC<IHeaderProps> =
                     </div>
                     <div>
                         <a href='#about'>
-                        <FontAwesomeIcon className={'fa-thin'} icon={faChevronDown} color={'white'} size={'3x'} />
+                        {/* <FontAwesomeIcon className={'fa-thin'} icon={faChevronDown} color={'white'} size={'3x'} /> */}
                         </a>
                     </div>
                 </div>

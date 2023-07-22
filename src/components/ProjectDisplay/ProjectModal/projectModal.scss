@@ -21,12 +21,20 @@ $transformation: all 2s ease;
     padding: 24px;
     padding-bottom: 0;
     text-align: start;
+    img {
+      max-width: 400px;
+      max-height: 300px;
+      // border-radius: 16px;
+      &.featured {
+        max-height: 800px;
+        width: 400px;
+        border-radius: 24px;
+        box-shadow: $box_shadow_light;
+      }
+    }
     > .description {
       text-transform: none;
       line-height: $bodyLineHeight;
-    }
-    > img {
-      width: 600px;
     }
     > .technologies {
       > strong {
@@ -78,7 +86,7 @@ $transformation: all 2s ease;
     .content {
       width: calc(100% - #{$baseUnit*2}px);
       padding: #{$baseUnit}px;
-      > img {
+      img, img.featured {
         width: 300px;
       }
     }

@@ -28,8 +28,12 @@ $accentColor2: $cool_gray;
 $bgColor: white;
 $debug_border: none;
 $box_shadow_1: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-$box_shadow_light: 2px 3px 5px -1px #999999;
-$bodyLineHeight: 32px;
+// $box_shadow_light: 2px 3px 5px -1px #999999;
+// $box_shadow_light: 5px 8px 10px rgba(200, 200, 200, 0.303);
+$box_shadow_dark: 5px 8px 12px rgba(0, 0, 0, 0.3);
+$box_shadow_light: 5px 8px 12px rgba(0, 0, 0, 0.2);
+
+$bodyLineHeight: 24px;
 
 $max_width: 850px;
 $navBarHeight: 50px;

@@ -19,9 +19,7 @@ export const ProjectModalBody: React.FC<IProjectModalBodyProps> = ({project}) =>
             <div>
                 <div className={'content'}>
                     <h2>{project.title}</h2>
-                    <div className={'description'}>
-                        {project.fullDescription}
-                    </div>
+                    <img className='featured' alt={'Featured project image'} src={`assets/projects/${project.featuredImageUri}`} />
                     <div className={'technologies'}>
                         <strong>Technologies</strong>
                         <div>
@@ -32,7 +30,9 @@ export const ProjectModalBody: React.FC<IProjectModalBodyProps> = ({project}) =>
                             })}
                         </div>
                     </div>
-                    <img alt={'zebra'} src={`assets/projects/${project.featuredImageUri}`} />
+                    <div className={'description'}>
+                        {project.fullDescription}
+                    </div>
                     {project.view}
                     <div className={'action-container'}>
                         {project.sourceControlUrl && (

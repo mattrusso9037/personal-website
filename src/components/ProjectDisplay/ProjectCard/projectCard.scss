@@ -4,8 +4,9 @@ $transformation: all .5s ease;
 
 .ProjectCard {
   background: white;
+  border-radius: 16px;
   color: black;
-  height: 300px;
+  height: 250px;
   min-width: 200px;
   background-position: center;
   background-size: cover;
@@ -24,6 +25,7 @@ $transformation: all .5s ease;
   }
 
   > .overlay {
+  border-radius: 16px;
     height: 100%;
     width: 100%;
     background: black;
@@ -61,5 +63,10 @@ $transformation: all .5s ease;
     > .h3 {
       font-weight: bold;
     }
+  }
+}
+@media screen and (max-width: 600px) {
+  .ProjectCard {
+    width: calc(100% - 32px);
   }
 }

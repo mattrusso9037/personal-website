@@ -40,7 +40,7 @@ export const ProjectDisplay: React.FC<IProjectDisplayProps> =
 
 
         return (
-            <Section className={'Projects'} title={''} icon={Icon.Implementation}>
+            <Section className={'Projects'} title={'Projects'} icon={Icon.Implementation}>
                 <div id="projects" className={'ProjectDisplay'}>
                     <div className={'project_container'}>
                         {projects.map((project, index) => {

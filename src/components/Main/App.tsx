@@ -11,6 +11,7 @@ import { ProjectModalBody } from '../ProjectDisplay/ProjectModal/ProjectModalBod
 import { Modal } from '../common/Modal/Modal';
 import { Login } from '../Login/Login';
 import { About } from '../About/About';
+import { CompanyDisplay } from '../CompanyDisplay/CompanyDisplay';
 
 function App() {
     const { getRef, scrollToElement } = useScroll();
@@ -30,17 +31,17 @@ function App() {
                     <Header onAboutClick={scrollToElement} />
                     <div className={'main_content'}>
                         <AboutMeCTA aboutRef={getRef(Sections.About)} />
-                        {isAuthenticated ? <>
+                        <>
                             <About />
+                            <CompanyDisplay />
                             <ProjectDisplay
                                 onProjectSelected={onProjectSelected}
                                 projects={mockProjects}
                                 showModal={showModal}
                                 setShowModal={setShowModal}
                             />
-                        </> : <Login setIsAuthenticated={setIsAuthenticated} />}
+                        </>
                         <Contact />
-
                     </div>
                 </>
             </div>

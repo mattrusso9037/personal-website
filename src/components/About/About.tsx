@@ -19,7 +19,7 @@ export const About: FC = () => {
                 <div>
                     <div className={'description_container'}>
                         <div>
-                        Welcome to my site! I'm Matt Russo, a results-driven Full Stack Software Engineer with a strong 
+                        I'm a results-driven Full Stack Software Engineer with a strong 
                         background in consulting. I have a solid foundation in both front-end and back-end development, 
                         and I'm dedicated to crafting innovative software solutions. Throughout my career, I've had the 
                         privilege of working on diverse projects and collaborating with various clients, bringing a unique 
@@ -52,7 +52,7 @@ export const About: FC = () => {
                     </div>
                 </div>
             </Section>
-            <TechnologyDisplay/>
+            {/* <TechnologyDisplay/> */}
         </>
 
 )

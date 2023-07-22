@@ -22,6 +22,8 @@
       > h2 {
         font-size: $baseUnit*4px;
         margin: 0;
+        text-decoration: underline;
+        text-underline-offset: 8px;
       }
 
       > hr {
